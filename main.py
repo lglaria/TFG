@@ -1,22 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#Orden de ejecucion servidor blockchain al iniciar
-#0. Si es la primera ejecucion (esto se comprueba si no hay generados ciertos archivos en sys) se conecta a los nodos predeterminados para pedir direcciones ip de otros nodos
-#1. Le pide a los otros nodos su copia de la cadena, aplica los protocolos para elegir la mas extensa, si tiene alguna cadena previa calculada la usa
-#2. Comienza a ejecutar
-
-#Hay que definir por defecto puertos para enviar y recibir mensajes
-
-
-#1/05 Intento de eliminacion de authkey: al parecer no es posible, investigar esto posteriormente.
-#1/05 Comprobacion de envio de varios mensajes usando input: No se debe usar input o raw_input
-#1/05 Es posible enviar varios mensajes usando una cola
-#12/06 Se ha unido con exito la implementacion del blockchain con la red p2p
-
-#20/06 Funciona el sistema de firma
-
-
 from multiprocessing.connection import Listener
 from multiprocessing import Process, Manager, Queue
 from multiprocessing.connection import Client
