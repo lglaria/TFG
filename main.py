@@ -57,7 +57,7 @@ if __name__ == '__main__':
 	puerto = 6000
 	
 
-	mining = 'on' #si on este nodo participa en la prueba de trabajo
+	mining = 'on' #si on este nodo participa en la prueba de trabajo, modificable.
 	send_queue = Queue()
 
 	Blockchain = blockchain()
