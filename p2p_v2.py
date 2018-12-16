@@ -10,12 +10,12 @@ from blockchain import *
 
 def client_listener(): #procesa los mensajes recibidos
 	listener = Listener(address=('127.0.0.1', puerto), authkey=key)
-	print 'listener starting'
+	print('listener starting')
 
 	while True:
-		print 'accepting conexions'
+		print('accepting conexions')
 		conn = listener.accept()
-		print 'connection accepted from', listener.last_accepted
+		print('connection accepted from', listener.last_accepted)
 
 		m = conn.recv()
 
@@ -30,7 +30,7 @@ def client_listener(): #procesa los mensajes recibidos
 		elif m[0] == 'new_block':
 			if Blockchain.validar_bloque(m[2], Blockchain.cadena[-1]):
 				Blockchain.incluir_bloque(m[2])
-		print len(Blockchain.cadena)
+		print(len(Blockchain.cadena))
 
 def send_msg(address0,key, msg):
 	if address0 == 'all': #en este caso le enviamos un mensaje a todos los nodos conocidos
@@ -50,12 +50,12 @@ if __name__ == '__main__':
 
 	addressbook = [('127.0.0.1', 6000)]
 	key = 'server'
-	crypto = ecdsa_p256()
+	crypto = Ecdsa_p256()
 	puerto = 5001
 
 	mining = 'on'
 	send_queue = Queue()
-	Blockchain = blockchain()
+	Blockchain = Blockchain()
 
 	p = Process(target=client_listener, args=())
 	p.start()
@@ -74,4 +74,4 @@ if __name__ == '__main__':
 	except:
 		pass			
 
-print 'end server'
+print('end server')

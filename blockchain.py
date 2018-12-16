@@ -11,32 +11,32 @@ import time
 import random
 
 #docstrings python, check
-class blockchain(object): #pasar a mayuscula init
+class Blockchain(object): #pasar a mayuscula init
     #formato bloques [hash_bloque_anterior, (data,data), timestamp, indice, nonce]
-    """
+	"""
 	formato bloques [hash_bloque_anterior, (data,data), timestamp, indice, nonce]
-    """
-    def __init__(self):
-        self.cadena = []
-        self.longitud_nonce = 4 #DIFICULTAD DE POW se puede modificar
+	"""
+	def __init__(self):
+		self.cadena = []
+		self.longitud_nonce = 4 #DIFICULTAD DE POW se puede modificar
         
-    def primer_bloque(self): #metodo para generar el primer bloque (cuando creamos la cadena)
-        primer_bloque = [0,0,int(round(time.time())),0]
-        self.cadena.append(self.pow(primer_bloque))
+	def primer_bloque(self): #metodo para generar el primer bloque (cuando creamos la cadena)
+		primer_bloque = [0,0,int(round(time.time())),0]
+		self.cadena.append(self.pow(primer_bloque))
         
-    def pow(self,bloque): #dado un bloque calcula un nonce
-        bloque_str = ''.join(str(e) for e in bloque)
+	def pow(self,bloque): #dado un bloque calcula un nonce
+		bloque_str = ''.join(str(e) for e in bloque)
 
-        while True:
-            var = format(random.getrandbits(32), '08b') #buscamos nonces de 32 bits
-            if sha256(bloque_str+str(var)).hexdigest()[:self.longitud_nonce] == '0'*self.longitud_nonce:
-                break
-	bloque.append(var)
-        return bloque
+		while True:
+			var = format(random.getrandbits(32), '08b') #buscamos nonces de 32 bits
+			if sha256(bloque_str+str(var)).hexdigest()[:self.longitud_nonce] == '0'*self.longitud_nonce:
+				break
+		bloque.append(var)
+		return bloque
 
-    def calcular_bloque(self, dato1): #equivale al proceso de minado
-        ultimo_bloque = self.cadena[-1]
-        indice_anterior = ultimo_bloque[3]
+	def calcular_bloque(self, dato1): #equivale al proceso de minado
+		ultimo_bloque = self.cadena[-1]
+		indice_anterior = ultimo_bloque[3]
         #se calcula el hash del bloque anterior
         hash_anterior = sha256(''.join(str(e) for e in ultimo_bloque)).hexdigest()
         
