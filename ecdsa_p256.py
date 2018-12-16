@@ -1,8 +1,10 @@
 from fastecdsa import curve, ecdsa, keys
 
 
-class ecdsa_p256:
-
+class Ecdsa_p256(object):
+	"""
+	Implementation of elliptic curve digital signature algorithm p256
+	"""
 	def __init__(self):
 		self.clave_privada = keys.gen_private_key(curve.P256)
 		self.clave_publica = keys.get_public_key(self.clave_privada, curve.P256)
