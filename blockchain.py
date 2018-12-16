@@ -1,3 +1,8 @@
+#to English
+"""
+Implementacion de un gestor de publicaciones basado en blockchain
+Por convenio se incluye una unica transaccion en cada bloque
+"""
 #Implementacion de un gestor de publicaciones basado en blockchain
 #Por convenio se incluye una unica transaccion en cada bloque
 from hashlib import sha256
@@ -5,7 +10,12 @@ from hashlib import sha256
 import time
 import random
 
-class blockchain: #formato bloques [hash_bloque_anterior, (data,data), timestamp, indice, nonce]
+#docstrings python, check
+class blockchain(object): #pasar a mayuscula init
+    #formato bloques [hash_bloque_anterior, (data,data), timestamp, indice, nonce]
+    """
+	formato bloques [hash_bloque_anterior, (data,data), timestamp, indice, nonce]
+    """
     def __init__(self):
         self.cadena = []
         self.longitud_nonce = 4 #DIFICULTAD DE POW se puede modificar
