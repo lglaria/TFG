@@ -1,0 +1,47 @@
+% +--------------------------------------------------------------------+
+% | Sample Chapter
+% +--------------------------------------------------------------------+
+
+\cleardoublepage
+
+
+
+\chapter{Introducción y objetivos.}
+\label{introduccion}
+
+%explicar aqui el problema del doble gasto
+El blockchain es un protocolo que permite mantener un registro distribuido e inmutable de las transacciones o comunicaciones entre los participantes de una determinada red. Para garantizar que en todo momento la veracidad de la información almacenada, el blockchain posee también un mecanismo de consenso que no necesita de ningún tipo de centralización para funcionar.
+ %A este registro lo llamaremos cadena de bloques para distinguirlo del nombre del protocolo.
+%aquí poner algo de la historia del protocolo, hablar del blockchain y de las distintas versiones (fundamentalmente criptomonedas) así enlazo con lo ya escrito.
+
+El origen del blockchain se remonta al año 2008, con la publicación del artículo \textit{Bitcoin: A Peer-to-Peer Electronic Cash System} \citep{bitcoin}. Se desconoce la verdadera identidad de la persona u organización oculta bajo el seudónimo de Satoshi Nakamoto, autor de este documento. %\footnote{https://bitcoin.org/bitcoin.pdf}
+En el año 2009, el propio Nakamoto publicó el código, escrito en C++, de la criptomoneda Bitcoin. Posteriormente fueron creadas nuevas monedas digitales basadas en la idea original del Bitcoin y a partir del año 2014 se comenzaron a estudiar aplicaciones del Blockchain distintas de las criptomonedas. Una aspecto importante de las primeras criptomonedas es su carácter completamente público, cualquier usuario de internet podía unirse a la red y participar activamente sin necesidad de ninguna autorización o verificación. 
+
+Todas estas implementaciones, independientemente de las variaciones en el protocolo, tienen en común el carácter distribuido del algoritmo y la inmutabilidad del registro (cadena de bloques). Sin embargo, se pueden establecer 3 distinciones generales en base a como se trate el aspecto público y el nivel de  descentralización:
+\begin{itemize}
+\item \textit{Blockchain público:} Cualquiera puede unirse a la red, todos los nodos pueden leer el registro, realizar transacciones y participar en el consenso.
+\item \textit{Blockchain de consorcio:} En el algoritmo de consenso solo intervienen una parte de los nodos. El acceso a la red y las consultas al registro en principio están abiertas a todos. Este sería el caso de una red pública y centralizada.
+\item \textit{Blockchain privado:} El acceso a la red no es público y además tanto la lectura del registro como la participión en el algoritmo de consenso pueden encontrarse limitados. Estamos ante una red privada que puede estar en mayor o menor medida centralizada.
+\end{itemize}
+
+%Debe notarse que la frontera entre un protocolo blockchain de consorcio y uno privado son más bien difusas
+Dado que es la variante más conocida y utilizada, y es a la que pertenece la primera criptomoneda, el Bitcoin, en este trabajo en general se estudiará el blockchain de tipo público.
+
+Al igual que no existe una única alternativa en la elección de los niveles de centralización y privacidad, en diferentes implementaciones del blockchain se han establecido distintos algoritmos de consenso. Sin embargo, para explicar sus diferencias hay que entender su funcionamiento y esto último es imposible sin antes haber definido y desarrollado una serie de cuestiones sobre criptografía.% y curvas algebraicas.
+
+El objetivo de este trabajo será en primer lugar dar las nociones matemáticas básicas que fundamentan el blockchain y una vez sea posible justificar el marco teórico de esta tecnología el siguiente paso será explicar su funcionamiento. En este punto será importante abstraer lo suficiente la especificación para intentar cubrir la mayor parte de las implementaciones existentes. Hay que tener en cuenta que el desarrollo de este protocolo ha estado ligado a sus implementaciones (o más bien al éxito de estas) y no a un trabajo teórico sistemático. El siguiente paso consistirá en estudiar el blockchain dentro del contexto específico de la computación distribuida y de la resolución de uno de los problemas fundamentales de este campo. Por último, se realizará una implementación del blockchain en la que se podrá comprobar que es posible llevar a la práctica de forma más o menos sencilla, las ideas desarrolladas en este trabajo.
+
+%Más allá del interés socioeconómico que puedan despertar las criptomonedas el blockchain constituye una potente herramienta dentro de la programación distribuida
+
+%siempre que garanticen que la información que cada nodo pretende escribir en el registro es considerada cierta por una parte significativa (quorum) de los otros nodos. Una característica de las primeras implementaciones del protocolo blockchain es que estaban pensadas para trabajar con grandes cantidades de participantes, por tanto es infactible que el quorum sea toda la red.
+
+%hablar de proof of work, algoritmos de consenso, y porque para las criptos se usan estos y no por ejemplo raft y demás. Ver por que no se pueden usar raft y paxos para blockchain (esto quizas iria mejor en otro tema)
+%revisar en el primer parrafo del capitulo lo que se dice de este algoritmo
+%meter aqui algo del problema de los generales bizantinos, explicar el problema y demás, y decir que sobre esto se volverá al final del trabajo.
+%no entrar en mucho detalle, en siguientes capítulos esto se tocará más.
+
+
+
+
+
+

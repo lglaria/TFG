@@ -1,0 +1,370 @@
+\documentclass[final, 12pt,oneside]{class_diss}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries}{}{0pt}{\Large}
+
+% +--------------------------------------------------------------------+
+% | The following command sets the bibliography style to American
+% | Institute of Physics (AIP).  Other styles are available in the
+% | styles directory.  To use a different style, replace "aip" with
+% | the filename of the style you want to use.
+% +--------------------------------------------------------------------+
+
+\bibliographystyle{alpha}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+% +--------------------------------------------------------------------+
+% | Now, we add in all external packages that we will use throughout   |
+% | the document.  You can add other packages as needed.
+% +--------------------------------------------------------------------+
+
+%\usepackage{caption} % Customize captions a bit more
+\usepackage{amsmath,amsthm,amssymb} % American Mathematics Society standards
+\usepackage{algorithm} 
+\usepackage[noend]{algpseudocode}
+\input{spanishAlgorithmic} % archivo de traduccion
+\usepackage{listings}
+
+\lstset{basicstyle=\fontsize{10}{12}\selectfont\ttfamily,
+        framerule=0pt,frame=single, %frame=trBL,frameround=ftttm,
+        lineskip=0pt,
+        emptylines=1,
+        showstringspaces=false,
+        escapechar=·,
+        language=Python
+}
+
+\usepackage{lmodern} %Vectorial source
+%\usepackage{wrapfig} % Wraps text around a figure or table
+\usepackage{graphicx} % Extended graphics package.
+\usepackage{subfig}
+\usepackage{float}
+%\usepackage{fancyhdr} % Efficiently handles headers and footers
+%\usepackage{braket} % Bra-Ket notation package
+%\usepackage{mathrsfs} % Specialized Math fonts (Hamiltonian, etc.)
+%\usepackage{boxedminipage} % Boxed text can be produced
+%\usepackage{setspace} % Controls line spacing via \begin{space}
+\usepackage{amsxtra}
+\usepackage{latexsym}
+
+
+% +--------------------------------------------------------------------+
+% | The color package allows one to select colors for hyperlinking     |
+% | (see below).                                                       |
+% +--------------------------------------------------------------------+
+
+\usepackage[usenames]{color}
+
+% +--------------------------------------------------------------------+
+% | Colors defined for use with this template.                         |
+% +--------------------------------------------------------------------+
+
+\definecolor{  Pink}{rgb}{1.0, 0.5, 0.5}
+\definecolor{Maroon}{rgb}{0.8, 0.0, 0.0}
+
+% +--------------------------------------------------------------------+
+% | In the commands below, we use the 'natbib' package, and specify    |
+% | the 'sort&compress' option, which condenses                        |
+% | citations from (1,2,3,5,9,10,11) to (1-3,5,9-11).  The 'bibpunct'  |
+% | option selects various parameters for how the citation will be     |
+% | displayed.  In this case, only the comma (separation between       |
+% | citations) and the 's' (superscript) arguments are chosen.  The    |
+% | other curly braces deal with how to 'wrap' the citation (using     |
+% | parentheses, brackets, etc.) and are not needed for the chosen     |
+% | style.                                                             |
+% +--------------------------------------------------------------------+
+
+\usepackage{natbib}
+%\bibpunct{}{}{,}{s}{}{}
+%\usepackage{hypernat}
+
+% +--------------------------------------------------------------------+
+% | Theorems, observations, lemmas       
+% +--------------------------------------------------------------------+
+
+\newtheorem{remark}{Observación}[chapter]
+\newtheorem{theorem}{Teorema}[chapter]
+\newtheorem{lemma}{Lema}[chapter]
+\newtheorem{definition}{Definición}[chapter]
+
+% +--------------------------------------------------------------------+
+% | Lastly, the hyperref package allows one to hyperlink cross-        |
+% | references and figures in a LaTeX document.                        |
+% +--------------------------------------------------------------------+
+
+\usepackage[pdftex, plainpages=false]{hyperref}
+
+\hypersetup{
+    linktocpage=true,
+    colorlinks=true,
+    citecolor=blue,
+    urlcolor=red,
+    linkcolor=Maroon,
+    citebordercolor={1 0 0},
+    urlbordercolor={1 0 0},
+    linkbordercolor={.7 .8 .8},
+    breaklinks=true
+    }
+
+% +--------------------------------------------------------------------+
+% | Page margins are set on 1 inch on all sides.                       |
+% +--------------------------------------------------------------------+
+
+\topmargin      = -0.56in
+\textheight     =  8.60in
+\textwidth      =  6.46in
+\oddsidemargin  =  0.02in
+
+
+\def\lcomen#1{\footnote{{\color{red}Comentario de Luis:} #1}}
+
+% +--------------------------------------------------------------------+
+% | The document finally begins here.                                  |
+% +--------------------------------------------------------------------+
+
+\begin{document}
+
+
+  \setcounter{page}{1}
+
+
+% +--------------------------------------------------------------------+
+% | Title Page -- Required for both Doctoral and Masters Students
+% +--------------------------------------------------------------------+
+
+%\input{title.tex}
+%   \pdfbookmark[0]{Portada}{PDFPortadaPage}
+
+% +--------------------------------------------------------------------+
+% | Autorizacion Page -- Required for both Doctoral and Masters Students
+% +--------------------------------------------------------------------+
+
+%\input{autorizacion.tex}
+%   \pdfbookmark[0]{Autorización}{PDFAutorizacionPage}
+
+% +--------------------------------------------------------------------+
+% | Resumen y astract
+% +--------------------------------------------------------------------+
+   
+%   \input{resumen.tex}
+   
+%   \pdfbookmark[0]{Resumen}{PDFResumenPage}
+
+%    \input{abstract.tex}
+%       \pdfbookmark[0]{Abstract}{PDFAbstractPage}
+%    \vfill
+
+
+% +--------------------------------------------------------------------+
+% | We use the following code to suppress page numbers and other
+% | style issues we do not want present on a given page.               |
+% +--------------------------------------------------------------------+
+
+%\thispagestyle{empty} Looks like it's ok to remove this line
+\newpage
+\pagenumbering{roman}
+
+% +--------------------------------------------------------------------+
+% | On the line below, set the number to represent the page number of
+% | the Table of Contents page.  For example, if the Table of Contents
+% | page is the 8th page of your document, enter 8 in the brackets.  This
+% | number may vary, depending on the length of your abstract.
+% |
+% | Numbers do not appear on the title and abstract pages, but they are
+% | included in the page count.  The Table of Contents page is the
+% | first page on which page numbers are displayed.
+% +--------------------------------------------------------------------+
+
+\setcounter{page}{1}
+
+% +--------------------------------------------------------------------+
+% | Here, we will generate our Table of Contents (TOC) entries.        |
+% | This adds the section to the TOC and then generates the indicated  |
+% | section.                                                           |
+% +--------------------------------------------------------------------+
+
+\phantomsection
+\addcontentsline{toc}{chapter}{Índice}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+%\hfill  Are these lines necessary?
+%\hfill
+
+% +--------------------------------------------------------------------+
+% | Acknowledgements Page
+% |
+% | If you choose not to have an Acknowledgements page, comment out
+% | or delete the following 3 lines.
+% +--------------------------------------------------------------------+
+
+%\input{agradecimientos.tex}
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Agradecimientos}
+
+% +--------------------------------------------------------------------+
+% | Dedication Page
+% |
+% | If you choose not to have a Dedication page, comment out
+% | or delete the following 3 lines.
+% +--------------------------------------------------------------------+
+
+%\input{dedicatoria.tex}
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Dedicatoria}
+
+% +--------------------------------------------------------------------+
+% | Preface Page
+% +--------------------------------------------------------------------+
+
+%\input{preface.tex}
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Preface}
+
+% +--------------------------------------------------------------------+
+% | We use arabic (1, 2, 3...) page numbering starting from page 1.    |
+% | Note, however, that there are many pages where this is not the     |
+% | desired behavior - such as the Title page, or abstract.  In these  |
+% | cases, we can use \thispagestyle{empty} to suppress page numbers,  |
+% | and other general style issues that we've defined globally.        |
+% +--------------------------------------------------------------------+
+
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% +--------------------------------------------------------------------+
+% | Here is where we include individual sections of the thesis or
+% | dissertation.                                                      |
+% +--------------------------------------------------------------------+
+
+% +--------------------------------------------------------------------+
+% | Chapters
+% +--------------------------------------------------------------------+
+
+\input{chapter1.tex}
+
+% +--------------------------------------------------------------------+
+% | Uncomment the lines below to add additional chapters.  Name the
+% | files chapter2.tex for Chapter 2, chapter3.tex for Chapter 3, etc.
+% +--------------------------------------------------------------------+
+
+\input{chapter2.tex}
+\input{chapter3.tex}
+%\input{chapter4.tex}
+%\input{chapter5.tex}
+%\input{appendixA.tex}
+%\input{conclusiones.tex}
+
+% +-------------------------------------------------------------------------+
+% | References                                                              
+% +--------------------------------------------------------------------+
+% | This template uses the BibTeX program to format references.  The
+% | 3 lines below create a separate Bibliography section and add
+% | an entry for "Bibliography" to the Table of Contents.  The actual
+% | data for your references (author, title, journal, date, etc.) are
+% | entered in the references.bib file.  See that file for information
+% | on how to enter references.
+% +--------------------------------------------------------------------+
+
+%\bibdata{references}
+%\bibliography{references}
+%\addcontentsline{toc}{chapter}{Bibliografía}
+\begin{thebibliography}{10}
+\bibitem{bitcoin}
+S. Nakamoto, \textit{Bitcoin: A peer-to-peer electronic cash system}, 2008, \url{http://bitcoin.org/bitcoin.pdf}  Accessed: 2018-11-13. (Archived by WebCite at \url{http://www.webcitation.org/73uMoT8YE})
+
+\bibitem[Hankerson, 2004]{elliptic_cripto}
+  D. Hankerson, A. Menezes, S. Vanstone,
+  \textit{Guide to Elliptic Curve Cryptography},
+  \newline Springer, New York, NY,
+  2nd edition,
+  2004.
+\bibitem[Cassels, J. (1991)]{group_law}
+Cassels, J. (1991). 
+\textit{Non-singular cubics. The group law. In LMSST: 24 Lectures on Elliptic Curves}
+ (London Mathematical Society Student Texts, pp. 27-31). Cambridge: Cambridge University Press. doi:10.1017/CBO9781139172530.008
+ 
+\bibitem[Verrill, H. (2000)]{group_law_verrill}
+ H. Verrill, \textit{Group Law for elliptic Curves}, Lecture Notes \url{http://www.math.ku.dk/~kiming/lecture_notes/2000-2001-elliptic_curves/grouplaw.pdf} Accessed: 2018-11-13. (Archived by WebCite at \url{http://www.webcitation.org/73uN8g2Qm})
+ 
+\bibitem[Kristin, 2009]{discrete_log}
+K. Lauter, K. Stange, \textit{The Elliptic Curve Discrete Logarithm Problem and Equivalent Hard Problems for Elliptic Divisibility Sequences. Selected Areas in Cryptography} pp. 309-327, Springer Berlin Heidelberg, isbn 978-3-642-04159-4
+ 
+\bibitem{sha-256}\textit{Secure Hash Standard (SHS)} Information Technology Laboratory National Institute of Standards and Technology, 2015,  \url{https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf} Accessed: 2018-11-13. (Archived by WebCite at \url{http://www.webcitation.org/73uNM08ZE}) 
+
+\bibitem{sha-1} 
+M. Stevens, E. Bursztein, P. Karpman, A. Albertini, Y. Markov, \textit{The first collision for full SHA-1}, Google Research, \url{http://shattered.io/static/shattered.pdf} Accessed: 2018-11-13. (Archived by WebCite at \url{http://www.webcitation.org/73uNS2E8T}) 
+ 
+\bibitem[Tanenbaum, 2002]{distributed_system}
+ A. Tanenbaum, M. van Steen. 
+ \textit{Distributed Systems: Principles and Paradigms.} 2002.
+ 
+\bibitem[Lamport, 2004]{2commit}L. Lamport, J. Gray, Consensus on transaction commit, Technical
+Report MSR-TR-2003-96, Microsoft Research, January 2004.
+
+
+\bibitem[A. Back, 2002]{hashcash} A. Back \textit{Hashcash - A Denial of Service Counter-Measure
+},2002,\url{http://www.hashcash.org/papers/hashcash.pdf} Accessed: 2018-11-13. (Archived by WebCite at \url{http://www.webcitation.org/73uNgCTaA})
+
+\bibitem[R. Wattenhofer, 2016]{blockchain science} 
+R. Wattenhofer, \textit{The Science of the Blockchain.},2016, Inverted Forest Publishing.
+
+\bibitem{electricidad} \textit{Bitcoin Mining Now Consuming More Electricity Than 159 Countries Including Ireland \& Most Countries In Africa} \url{https://powercompare.co.uk/bitcoin/} Accessed: 2018-11-13. (Archived by WebCite at \url{http://www.webcitation.org/73uNlJOrn})
+
+\bibitem{pos} \textit{Proof of Stake FAQ} \url{https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ#what-is-proof-of-stake}
+
+\bibitem{pob} \textit{Slimcoin
+A Peer-to-Peer Crypto-Currency with Proof-of-Burn}, 2014  \url{http://www.doc.ic.ac.uk/~ids/realdotdot/crypto_papers_etc_worth_reading/proof_of_burn/slimcoin_whitepaper.pdf}
+
+\bibitem[Lamport, 1982]{byzantine generals}
+L. Lamport , R. Shostak , M. Pease, \textit{The Byzantine Generals Problem}, 1982,  ACM Transactions on Programming Languages and Systems, pp. 1-2 \url{https://web.archive.org/web/20170205142845/http://lamport.azurewebsites.net/pubs/byz.pdf}
+
+\bibitem[V. Gramoli, 2017]{blockchain consensus}
+V. Gramoli, \textit{From blockchain consensus back to byzantine consensus.} (2017). \url{http://poseidon.it.usyd.edu.au/~gramoli/web/doc/pubs2/Blockchain2Byzantine.pdf}
+
+\bibitem{paxos} L. Lamport, \textit{Paxos Made Simple}, 2001, \url{http://lamport.azurewebsites.net/pubs/paxos-simple.pdf}
+
+\bibitem{raft} \textit{Raft consensus algorithm} \url{https://raft.github.io/}
+
+\bibitem{fastecdsa} Documentación librería fastecdsa \url{https://pypi.org/project/fastecdsa/} Accessed: 2018-11-13. (Archived by WebCite at \url{http://www.webcitation.org/73uOA1nmI})
+
+\bibitem{hashlib} Documentación librería hashlib de Python \url{https://docs.python.org/2/library/hashlib.html} Accessed: 2018-11-13. (Archived by WebCite at \url{http://www.webcitation.org/73uO4Hti7})
+
+\bibitem{multiprocessing} Documentación librería multiprocessing \url{https://docs.python.org/2/library/multiprocessing.html} Accessed: 2018-11-13. (Archived by WebCite at \url{http://www.webcitation.org/73uNs8AP7})
+
+\end{thebibliography}
+
+%\begin{thebibliography}{12}
+
+%\bibitem{elliptic_cripto}
+%  D. Hankerson, A.Menezes, S.Vanstone,
+%  \textit{Guide to Elliptic Curve Cryptography},
+%  Springer, New York, NY,
+%  2nd edition,
+%  2004.
+
+
+
+%\end{thebibliography}
+%\addcontentsline{toc}{chapter}{Bibliografía}
+% +--------------------------------------------------------------------+
+% | Finally, we generate the appendix.  To add or delete appendices,
+% | add or remove the line
+% |
+% |     \input{appendixX.tex}
+% |
+% | where "X" is the letter designation of the Appendix (A, B, C, etc.)
+% | You should have one \input{appendixX.tex} line and a corresponding
+% | file appendixX.tex for each appendix.                                 |
+% +--------------------------------------------------------------------+
+
+%\appendix
+
+%\input{appendixB.tex}
+
+\end{document}
