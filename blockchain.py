@@ -26,10 +26,9 @@ class Blockchain(object): #pasar a mayuscula init
 
 	def pow(self,bloque): #dado un bloque calcula un nonce
 		bloque_str = ''.join(str(e) for e in bloque)
-
 		while True:
 			var = format(random.getrandbits(32), '08b') #buscamos nonces de 32 bits
-			if sha256(bloque_str+str(var)).hexdigest()[:self.longitud_nonce] == '0'*self.longitud_nonce:
+			if sha256((bloque_str+str(var)).encode('utf-8')).hexdigest()[:self.longitud_nonce] == '0'*self.longitud_nonce:
 				break
 		bloque.append(var)
 		return bloque
@@ -38,7 +37,7 @@ class Blockchain(object): #pasar a mayuscula init
 		ultimo_bloque = self.cadena[-1]
 		indice_anterior = ultimo_bloque[3]
 		#se calcula el hash del bloque anterior
-		hash_anterior = sha256(''.join(str(e) for e in ultimo_bloque)).hexdigest()
+		hash_anterior = sha256((''.join(str(e) for e in ultimo_bloque)).encode('utf-8')).hexdigest()
 
 		timestamp = int(round(time.time()))
 
