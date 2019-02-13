@@ -1,0 +1,18 @@
+\BOOKMARK [0][-]{section*.1}{\315ndice}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Introducci\363n y objetivos.}{}% 2
+\BOOKMARK [0][-]{chapter.2}{Criptograf\355a y Blockchain}{}% 3
+\BOOKMARK [1][-]{section.2.1}{Curvas el\355pticas y ley de grupo}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.2}{Funciones Hash}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.3}{Algoritmo ECDSA}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{Especificaci\363n del protocolo blockchain}{}% 7
+\BOOKMARK [1][-]{section.3.1}{Objetivos del Blockchain}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{Configuraci\363n de la red}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.3}{Cadena de bloques}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.4}{Algoritmo de prueba de trabajo}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.5}{Bifurcaciones}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.6}{Alternativas a la prueba de trabajo}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.7}{Privacidad y seguridad}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{El problema del consenso}{}% 15
+\BOOKMARK [1][-]{section.4.1}{El problema de los generales bizantinos}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{Soluci\363n desde el Blockchain}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.3}{Limitaciones del Blockchain}{chapter.4}% 18
