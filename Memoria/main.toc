@@ -1,19 +1,19 @@
 \babel@toc {spanish}{}
-\contentsline {chapter}{\IeC {\'I}ndice}{\es@scroman {i}}{section*.1}
-\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n y objetivos.}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Criptograf\IeC {\'\i }a y Blockchain}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Curvas el\IeC {\'\i }pticas y ley de grupo}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Funciones Hash}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Algoritmo ECDSA}{7}{section.2.3}
-\contentsline {chapter}{\numberline {3}Especificaci\IeC {\'o}n del protocolo blockchain}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Objetivos del Blockchain}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Configuraci\IeC {\'o}n de la red}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}Cadena de bloques}{11}{section.3.3}
-\contentsline {section}{\numberline {3.4}Algoritmo de prueba de trabajo}{11}{section.3.4}
-\contentsline {section}{\numberline {3.5}Bifurcaciones}{13}{section.3.5}
-\contentsline {section}{\numberline {3.6}Alternativas a la prueba de trabajo}{14}{section.3.6}
-\contentsline {section}{\numberline {3.7}Privacidad y seguridad}{15}{section.3.7}
-\contentsline {chapter}{\numberline {4}El problema del consenso}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}El problema de los generales bizantinos}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Soluci\IeC {\'o}n desde el Blockchain}{18}{section.4.2}
-\contentsline {section}{\numberline {4.3}Limitaciones del Blockchain}{18}{section.4.3}
+\contentsline {chapter}{\IeC {\'I}ndice}{\es@scroman {i}}{section*.1}% 
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n y objetivos.}{1}{chapter.1}% 
+\contentsline {chapter}{\numberline {2}Criptograf\IeC {\'\i }a y Blockchain}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Curvas el\IeC {\'\i }pticas y ley de grupo}{3}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Funciones Hash}{5}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Algoritmo ECDSA}{7}{section.2.3}% 
+\contentsline {chapter}{\numberline {3}Especificaci\IeC {\'o}n del protocolo blockchain}{9}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Objetivos del Blockchain}{9}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Configuraci\IeC {\'o}n de la red}{10}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Cadena de bloques}{11}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Algoritmo de prueba de trabajo}{11}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}Bifurcaciones}{13}{section.3.5}% 
+\contentsline {section}{\numberline {3.6}Alternativas a la prueba de trabajo}{14}{section.3.6}% 
+\contentsline {section}{\numberline {3.7}Privacidad y seguridad}{15}{section.3.7}% 
+\contentsline {chapter}{\numberline {4}El problema del consenso}{17}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}El problema de los generales bizantinos}{17}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Soluci\IeC {\'o}n desde el Blockchain}{18}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Limitaciones del Blockchain}{18}{section.4.3}% 
