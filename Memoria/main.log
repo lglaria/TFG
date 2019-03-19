@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  5 MAR 2019 22:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  13 MAR 2019 21:56
 entering extended mode
 **./main.tex
 (main.tex
@@ -664,6 +664,10 @@ Overfull \hbox (11.87906pt too wide) in paragraph at lines 35--40
 [][] [][] 
  []
 
+
+Package natbib Warning: Citation `group_law_verrill' on page 4 undefined on inp
+ut line 50.
+
 [4 <./figures/elliptic-eps-converted-to.pdf> <./figures/elliptic1-eps-converted
 -to.pdf>]
 
@@ -671,119 +675,79 @@ Package natbib Warning: Citation `sha-256' on page 5 undefined on input line 60
 .
 
 [5] [6]
+
+Package natbib Warning: Author undefined for citation`elliptic_cripto' 
+(natbib)                on page 7 on input line 109.
+
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 119.
-) (chapter3.tex [7] [8]
+[7]) (chapter3.tex [8]
 Cap\'{\i }tulo 3.
 [9
 
 
-] [10] [11] [12] [13] [14] [15]) (chapter4.tex [16]
+] [10] [11] [12] [13] [14]
+
+Package natbib Warning: Citation `pos' on page 15 undefined on input line 85.
+
+[15]) (chapter4.tex [16]
 Cap\'{\i }tulo 4.
 [17
 
 
-] [18]) [19]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 279.
-
+] [18]) (main.bbl [19]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 21.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 1122) in paragraph at lines 279--280
-\T1/lmtt/m/n/12 org / bitcoin . pdf$[][] \T1/lmr/m/n/12 Ac-ces-sed: 2018-11-13.
- (Ar-chi-ved by Web-Ci-te at [][]$\T1/lmtt/m/n/12 http : / / www .
+Underfull \hbox (badness 10000) in paragraph at lines 65--70
+[]\T1/lmr/m/n/12 Slimcoin a peer-to-peer crypto-currency with proof-of-burn.  [
+][]$\T1/lmtt/m/n/12 http :
  []
 
 
-Underfull \hbox (badness 1762) in paragraph at lines 311--313
-[]\T1/lmr/m/n/12 A. Back \T1/lmr/m/it/12 Hash-cash - A De-nial of Ser-vi-ce Cou
-nter-Measure \T1/lmr/m/n/12 ,2002,[][]$\T1/lmtt/m/n/12 http : / / www .
+Underfull \hbox (badness 10000) in paragraph at lines 65--70
+\T1/lmtt/m/n/12 / / www . doc . ic . ac . uk / ~ids / realdotdot / crypto _ pap
+ers _ etc _ worth _
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
-[]\T1/lmr/m/it/12 Proof of Sta-ke FAQ [][]$\T1/lmtt/m/n/12 https : / / github .
- com / ethereum / wiki / wiki /
+Underfull \hbox (badness 5592) in paragraph at lines 65--70
+\T1/lmtt/m/n/12 reading / proof _ of _ burn / slimcoin _ whitepaper . pdf$[][]\
+T1/lmr/m/n/12 .  Ac-ces-sed: 2019-02-
  []
 
 [20
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
-[]\T1/lmr/m/it/12 Slimcoin A Peer-to-Peer Crypto-Currency with Proof-of-Burn\T1
-/lmr/m/n/12 , 2014 [][]$\T1/lmtt/m/n/12 http :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--323
-\T1/lmtt/m/n/12 / / www . doc . ic . ac . uk / ~ids / realdotdot / crypto _ pap
-ers _ etc _ worth _ reading /
- []
-
-
-Underfull \hbox (badness 5260) in paragraph at lines 322--323
-\T1/lmtt/m/n/12 proof _ of _ burn / slimcoin _ whitepaper . pdf$[][] \T1/lmr/m/
-n/12 Ac-ces-sed: 2019-02-19. (Ar-chi-ved by
- []
-
-
-Underfull \hbox (badness 4608) in paragraph at lines 325--326
-\T1/lmr/m/n/12 ces-sed: 2019-02-19. (Ar-chi-ved by Web-Ci-te at [][]$\T1/lmtt/m
-/n/12 http : / / www . webcitation . org /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--330
-\T1/lmtt/m/n/12 poseidon . it . usyd . edu . au / ~gramoli / web / doc / pubs2 
-/ Blockchain2Byzantine . pdf$[][]
- []
-
-
-Underfull \hbox (badness 1418) in paragraph at lines 328--330
-\T1/lmr/m/n/12 Ac-ces-sed: 2019-02-19. (Ar-chi-ved by Web-Ci-te at [][]$\T1/lmt
-t/m/n/12 http : / / www . webcitation . org /
- []
-
-
-Underfull \hbox (badness 4621) in paragraph at lines 337--338
-\T1/lmtt/m/n/12 hashlib . html$[][] \T1/lmr/m/n/12 Ac-ces-sed: 2018-11-13. (Ar-
-chi-ved by Web-Ci-te at [][]$\T1/lmtt/m/n/12 http : / / www .
- []
-
-
-Underfull \hbox (badness 7888) in paragraph at lines 339--340
-[]\T1/lmr/m/n/12 Documentación li-bre-ría mul-ti-pro-ces-sing [][]$\T1/lmtt/m/n
-/12 https : / / docs . python . org / 2 / library /
- []
-
+])
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 371.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 312.
 [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 371.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 312.
  (main.aux
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 371.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 371.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 312.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 312.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B3FABEF8283BE8D474ACA9DC0BCFC98D;1313.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 371.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 312.
  ) 
 Here is how much of TeX's memory you used:
- 11266 strings out of 492946
- 163764 string characters out of 3135483
- 335221 words of memory out of 3000000
- 14872 multiletter control sequences out of 15000+200000
+ 11253 strings out of 492946
+ 163491 string characters out of 3135483
+ 334221 words of memory out of 3000000
+ 14862 multiletter control sequences out of 15000+200000
  69511 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,10n,49p,1609b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,10n,49p,1609b,482s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm
@@ -800,9 +764,9 @@ fonts/type1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (22 pages, 344771 bytes).
+Output written on main.pdf (22 pages, 329407 bytes).
 PDF statistics:
- 421 PDF objects out of 1000 (max. 8388607)
- 80 named destinations out of 1000 (max. 500000)
+ 374 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
  163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,39 +1,16 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: alpha.bst
-White space in argument---line 90 of file main.aux
- : \citation{byzantine
- :                     generals}
-I'm skipping whatever remains of this command
-White space in argument---line 91 of file main.aux
- : \citation{byzantine
- :                     generals}
-I'm skipping whatever remains of this command
-White space in argument---line 99 of file main.aux
- : \citation{byzantine
- :                     generals}
-I'm skipping whatever remains of this command
-White space in argument---line 102 of file main.aux
- : \citation{blockchain
- :                      consensus}
-I'm skipping whatever remains of this command
-Illegal, another \bibstyle command---line 104 of file main.aux
+Illegal, another \bibstyle command---line 119 of file main.aux
  : \bibstyle
  :          {plain}
 I'm skipping whatever remains of this command
 Database file #1: references.bib
-Warning--I didn't find a database entry for "bitcoin"
-Warning--I didn't find a database entry for "group_law"
 Warning--I didn't find a database entry for "group_law_verrill"
 Warning--I didn't find a database entry for "sha-256"
-Warning--I didn't find a database entry for "sha-1"
-Warning--I didn't find a database entry for "elliptic_cripto"
-Warning--I didn't find a database entry for "discrete_log"
-Warning--I didn't find a database entry for "hashcash"
-Warning--I didn't find a database entry for "electricidad"
 Warning--I didn't find a database entry for "pos"
-Warning--I didn't find a database entry for "pob"
-Warning--I didn't find a database entry for "distributed_system"
-Warning--I didn't find a database entry for "2commit"
-Warning--I didn't find a database entry for "paxos"
-Warning--I didn't find a database entry for "raft"
-(There were 5 error messages)
+Warning--to sort, need author or key in electricidad
+Warning--to sort, need author or key in pob
+Warning--empty journal in hashcash
+Warning--empty journal in bitcoin
+Warning--empty journal in raft
+(There was 1 error message)

@@ -1,3 +1,82 @@
-\begin{thebibliography}{}
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{SBK{\etalchar{+}}17}
+
+\bibitem[B{\etalchar{+}}02]{hashcash}
+Adam Back et~al.
+\newblock Hashcash-a denial of service counter-measure.
+\newblock 2002.
+
+\bibitem[CC91]{group_law}
+John William~Scott Cassels and John William~Scott Cassels.
+\newblock {\em LMSST: 24 Lectures on Elliptic Curves}, volume~24.
+\newblock Cambridge University Press, 1991.
+
+\bibitem[DH04]{elliptic_cripto}
+A.~Menezes D.~Hankerson, S.~Vanstone.
+\newblock {\em Guide to Elliptic Curve Cryptography}.
+\newblock Springer, New York, NY, 2004.
+
+\bibitem[ele]{electricidad}
+Bitcoin mining now consuming more electricity than 159 countries.
+\newblock \url{https://powercompare.co.uk/bitcoin/}.
+\newblock Accessed: 2018-11-13. (Archived by WebCite at
+  \url{http://www.webcitation.org/73uNlJOrn}).
+
+\bibitem[GL06]{2commit}
+Jim Gray and Leslie Lamport.
+\newblock Consensus on transaction commit.
+\newblock {\em ACM Transactions on Database Systems (TODS)}, 31(1):133--160,
+  2006.
+
+\bibitem[Gra17]{blockchain_consensus}
+Vincent Gramoli.
+\newblock From blockchain consensus back to byzantine consensus.
+\newblock {\em Future Generation Computer Systems}, 2017.
+
+\bibitem[L{\etalchar{+}}01]{paxos}
+Leslie Lamport et~al.
+\newblock Paxos made simple.
+\newblock {\em ACM Sigact News}, 32(4):18--25, 2001.
+
+\bibitem[LS08]{discrete_log}
+Kristin~E Lauter and Katherine~E Stange.
+\newblock The elliptic curve discrete logarithm problem and equivalent hard
+  problems for elliptic divisibility sequences.
+\newblock In {\em International Workshop on Selected Areas in Cryptography},
+  pages 309--327. Springer, 2008.
+
+\bibitem[LSP82]{byzantine_generals}
+Leslie Lamport, Robert Shostak, and Marshall Pease.
+\newblock The byzantine generals problem.
+\newblock {\em ACM Transactions on Programming Languages and Systems (TOPLAS)},
+  4(3):382--401, 1982.
+
+\bibitem[N{\etalchar{+}}08]{bitcoin}
+Satoshi Nakamoto et~al.
+\newblock Bitcoin: A peer-to-peer electronic cash system.
+\newblock 2008.
+
+\bibitem[OO15]{raft}
+Diego Ongaro and John Ousterhout.
+\newblock Raft consensus algorithm.
+\newblock 2015.
+
+\bibitem[pob]{pob}
+Slimcoin a peer-to-peer crypto-currency with proof-of-burn.
+\newblock
+  \url{http://www.doc.ic.ac.uk/~ids/realdotdot/crypto_papers_etc_worth_reading/proof_of_burn/slimcoin_whitepaper.pdf}.
+\newblock Accessed: 2019-02-19. (Archived by WebCite at
+  \url{http://www.webcitation.org/76JMlsixP}).
+
+\bibitem[SBK{\etalchar{+}}17]{sha-1}
+Marc Stevens, Elie Bursztein, Pierre Karpman, Ange Albertini, and Yarik Markov.
+\newblock The first collision for full sha-1.
+\newblock In {\em Annual International Cryptology Conference}, pages 570--596.
+  Springer, 2017.
+
+\bibitem[TVS07]{distributed_system}
+Andrew~S Tanenbaum and Maarten Van~Steen.
+\newblock {\em Distributed systems: principles and paradigms}.
+\newblock Prentice-Hall, 2007.
 
 \end{thebibliography}
