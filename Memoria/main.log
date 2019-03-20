@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.15)  19 MAR 2019 22:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.15)  20 MAR 2019 22:47
 entering extended mode
 **./main.tex
 (main.tex
@@ -1152,7 +1152,7 @@ Package epstopdf Info: Source file: <figures/elliptic.eps>
 ted-to.pdf figures/elliptic.eps>
 (epstopdf)             \includegraphics on input line 35.
 Package epstopdf Info: Output file is already uptodate.
-<figures/elliptic-eps-converted-to.pdf, id=130, 462.72874pt x 346.29375pt>
+<figures/elliptic-eps-converted-to.pdf, id=135, 462.72874pt x 346.29375pt>
 File: figures/elliptic-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/elliptic-eps-converted-to.pdf>
 Package pdftex.def Info: figures/elliptic-eps-converted-to.pdf  used on input l
@@ -1174,7 +1174,7 @@ Package epstopdf Info: Source file: <figures/elliptic1.eps>
 rted-to.pdf figures/elliptic1.eps>
 (epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
-<figures/elliptic1-eps-converted-to.pdf, id=131, 462.72874pt x 346.29375pt>
+<figures/elliptic1-eps-converted-to.pdf, id=136, 462.72874pt x 346.29375pt>
 File: figures/elliptic1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/elliptic1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/elliptic1-eps-converted-to.pdf  used on input 
@@ -1528,6 +1528,12 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 67.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 67.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 68.
+
+("C:\Users\Luis Alberto Glaría\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\
+t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 69.
 Package babel Info: Redefining spanish shorthand >>
@@ -1553,47 +1559,64 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 69.
  [13]
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 75.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 75.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 75.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 75.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 75.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 75.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 84.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 84.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 84.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 84.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 84.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 84.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 84.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 84.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 84.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 84.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 84.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 84.
- [14]
-
-Package natbib Warning: Citation `pos' on page 15 undefined on input line 85.
+Underfull \hbox (badness 10000) in paragraph at lines 70--70
+[][][]\T1/lmr/m/n/10 https://cointelegraph.com/news/report-analyst-finds-nvidia
+-earned-135-billion-more-in-total-crypto-
+ []
 
 Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 72.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 72.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 72.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 72.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 72.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 72.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 80.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 80.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 80.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 80.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 80.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 80.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 83.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 83.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 83.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 83.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 83.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 83.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 83.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 83.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 83.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 83.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 83.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 83.
+[14]
+
+Package natbib Warning: Citation `pos' on page 15 undefined on input line 90.
+
+Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 95.
 Package babel Info: Redefining spanish shorthand >>
 (babel)             in language  on input line 95.
@@ -1606,30 +1629,31 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 95.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 95.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 95.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 95.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 95.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 95.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 95.
+[15]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 98.
+(babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 98.
-[15]) (chapter4.tex
+(babel)             in language  on input line 100.
+) (chapter4.tex
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 1.
 Package babel Info: Redefining spanish shorthand >>
@@ -1795,12 +1819,6 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1.
  [19]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 5.
-
-("C:\Users\Luis Alberto Glaría\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\
-t1lmtt.fd"
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
 Underfull \hbox (badness 10000) in paragraph at lines 10--15
 \T1/lmtt/m/n/12 ac . uk / ~ids / realdotdot / crypto _ papers _ etc _ worth _ r
 eading / proof _ of _ burn /
@@ -1876,7 +1894,7 @@ LaTeX Info: Redefining \% on input line 23.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 313.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 313.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B3FABEF8283BE8D474ACA9DC0BCFC98D;1313.
+(rerunfilecheck)             Checksum: D24CEE20EAB6A9C45E2EA7D023FA4481;1372.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1884,11 +1902,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 313.
  ) 
 Here is how much of TeX's memory you used:
- 11542 strings out of 493303
- 170525 string characters out of 3123257
+ 11557 strings out of 493303
+ 170702 string characters out of 3123257
  330003 words of memory out of 3000000
- 14793 multiletter control sequences out of 15000+200000
- 69511 words of font info for 66 fonts, out of 3000000 for 9000
+ 14802 multiletter control sequences out of 15000+200000
+ 72822 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,10n,49p,1609b,509s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Luis Alberto Glaría/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dv
@@ -1909,16 +1927,19 @@ Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Luis A
 lberto Glaría/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pf
 b><C:/Users/Luis Alberto Glaría/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/lm/lmr12.pfb><C:/Users/Luis Alberto Glaría/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/Luis Alberto Glaría/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/Luis Alberto 
-Glaría/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/
-Users/Luis Alberto Glaría/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
-/lm/lmsy8.pfb><C:/Users/Luis Alberto Glaría/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/lm/lmtt12.pfb><C:/Users/Luis Alberto Glaría/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (22 pages, 330392 bytes).
+X 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/Luis Alberto Glaría/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/Luis Alberto Gl
+aría/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Us
+ers/Luis Alberto Glaría/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/l
+m/lmsy10.pfb><C:/Users/Luis Alberto Glaría/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/lm/lmsy8.pfb><C:/Users/Luis Alberto Glaría/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Luis Alberto Glarí
+a/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/Users/
+Luis Alberto Glaría/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb>
+Output written on main.pdf (22 pages, 380660 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
- 163 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 396 PDF objects out of 1000 (max. 8388607)
+ 78 named destinations out of 1000 (max. 500000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
