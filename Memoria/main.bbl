@@ -6,6 +6,13 @@ Bitcoin mining now consuming more electricity than 159 countries.
 \newblock Accessed: 2018-11-13. (Archived by WebCite at
   \url{http://www.webcitation.org/73uNlJOrn}).
 
+\bibitem{pos}
+Proof of stake faq.
+\newblock
+  \url{https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQ#what-is-proof-of-stake}.
+\newblock Accessed: 2019-02-19. (Archived by WebCite at
+  \url{http://www.webcitation.org/76JNGcsPi}).
+
 \bibitem{pob}
 Slimcoin a peer-to-peer crypto-currency with proof-of-burn.
 \newblock
@@ -61,6 +68,8 @@ Kristin~E Lauter and Katherine~E Stange.
 Satoshi Nakamoto et~al.
 \newblock Bitcoin: A peer-to-peer electronic cash system.
 \newblock 2008.
+\newblock Accessed: 2018-11-13. (Archived by WebCite at
+  \url{http://www.webcitation.org/73uMoT8YE}).
 
 \bibitem{raft}
 Diego Ongaro and John Ousterhout.
@@ -77,5 +86,13 @@ Marc Stevens, Elie Bursztein, Pierre Karpman, Ange Albertini, and Yarik Markov.
 Andrew~S Tanenbaum and Maarten Van~Steen.
 \newblock {\em Distributed systems: principles and paradigms}.
 \newblock Prentice-Hall, 2007.
+
+\bibitem{group_law_verrill}
+H~Verrill.
+\newblock Group law for elliptic curves.
+\newblock
+  \url{http://www.math.ku.dk/~kiming/lecture_notes/2000-2001-elliptic_curves/grouplaw.pdf}.
+\newblock Accessed: 2018-11-13. (Archived by WebCite at
+  \url{http://www.webcitation.org/73uN8g2Qm}).
 
 \end{thebibliography}

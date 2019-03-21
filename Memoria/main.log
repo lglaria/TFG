@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.15)  20 MAR 2019 22:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.15)  21 MAR 2019 08:07
 entering extended mode
 **./main.tex
 (main.tex
@@ -1185,10 +1185,6 @@ Overfull \hbox (11.87906pt too wide) in paragraph at lines 35--40
 [][] [][] 
  []
 
-
-Package natbib Warning: Citation `group_law_verrill' on page 4 undefined on inp
-ut line 50.
-
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 53.
 Package babel Info: Redefining spanish shorthand >>
@@ -1613,9 +1609,6 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 83.
 [14]
-
-Package natbib Warning: Citation `pos' on page 15 undefined on input line 90.
-
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 95.
 Package babel Info: Redefining spanish shorthand >>
@@ -1640,7 +1633,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 95.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 95.
-[15]
+ [15]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 100.
 Package babel Info: Redefining spanish shorthand >>
@@ -1820,40 +1813,52 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1.
  [19]
 Underfull \hbox (badness 10000) in paragraph at lines 10--15
+[]\T1/lmr/m/n/12 Proof of sta-ke faq.  [][]$\T1/lmtt/m/n/12 https : / / github 
+. com / ethereum / wiki / wiki /
+ []
+
+
+Underfull \hbox (badness 2035) in paragraph at lines 10--15
+\T1/lmtt/m/n/12 Proof-[]of-[]Stake-[]FAQ # what-[]is-[]proof-[]of-[]stake$[][]\
+T1/lmr/m/n/12 .  Ac-ces-sed: 2019-02-19. (Ar-chi-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--22
 \T1/lmtt/m/n/12 ac . uk / ~ids / realdotdot / crypto _ papers _ etc _ worth _ r
 eading / proof _ of _ burn /
  []
 
 
-Underfull \hbox (badness 3000) in paragraph at lines 10--15
+Underfull \hbox (badness 3000) in paragraph at lines 17--22
 \T1/lmtt/m/n/12 slimcoin _ whitepaper . pdf$[][]\T1/lmr/m/n/12 .  Ac-ces-sed: 2
 019-02-19. (Ar-chi-ved by Web-Ci-te at
  []
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 76.
+(babel)             in language  on input line 79.
 [20
 
 ])
@@ -1902,10 +1907,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 313.
  ) 
 Here is how much of TeX's memory you used:
- 11557 strings out of 493303
- 170702 string characters out of 3123257
+ 11563 strings out of 493303
+ 170816 string characters out of 3123257
  330003 words of memory out of 3000000
- 14802 multiletter control sequences out of 15000+200000
+ 14806 multiletter control sequences out of 15000+200000
  72822 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,10n,49p,1609b,509s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1937,9 +1942,9 @@ grams/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Luis Alberto Glarí
 a/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/Users/
 Luis Alberto Glaría/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
 nts/symbols/msbm10.pfb>
-Output written on main.pdf (22 pages, 380660 bytes).
+Output written on main.pdf (22 pages, 386260 bytes).
 PDF statistics:
- 396 PDF objects out of 1000 (max. 8388607)
- 78 named destinations out of 1000 (max. 500000)
+ 408 PDF objects out of 1000 (max. 8388607)
+ 80 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
