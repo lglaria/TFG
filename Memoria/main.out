@@ -10,11 +10,17 @@
 \BOOKMARK [1][-]{section.3.3}{Cadena de bloques}{chapter.3}% 10
 \BOOKMARK [1][-]{section.3.4}{Algoritmo de prueba de trabajo}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.5}{Uso de GPUs}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.6}{Bifurcaciones}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.7}{Alternativas a la prueba de trabajo}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.8}{Privacidad y seguridad}{chapter.3}% 15
-\BOOKMARK [0][-]{chapter.4}{El problema del consenso}{}% 16
-\BOOKMARK [1][-]{section.4.1}{El problema de los generales bizantinos}{chapter.4}% 17
-\BOOKMARK [1][-]{section.4.2}{Soluci\363n desde el Blockchain}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.3}{Limitaciones del Blockchain}{chapter.4}% 19
-\BOOKMARK [0][-]{section.4.3}{Bibliograf\355a}{}% 20
+\BOOKMARK [1][-]{section.3.6}{Resistencia a ASIC}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.7}{Bifurcaciones}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.8}{Alternativas a la prueba de trabajo}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.9}{Privacidad y seguridad}{chapter.3}% 16
+\BOOKMARK [0][-]{chapter.4}{El problema del consenso}{}% 17
+\BOOKMARK [1][-]{section.4.1}{El problema de los generales bizantinos}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.2}{Soluci\363n desde el Blockchain}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.3}{Limitaciones del Blockchain}{chapter.4}% 20
+\BOOKMARK [0][-]{chapter.5}{Implementaci\363n del protocolo blockchain}{}% 21
+\BOOKMARK [1][-]{section.5.1}{Caracter\355sticas de la implementaci\363n}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.2}{Aspectos t\351cnicos.}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.3}{Seguridad de la implementaci\363n y posibles mejoras.}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.4}{C\341lculos sobre el algoritmo de prueba de trabajo}{chapter.5}% 25
+\BOOKMARK [0][-]{figure.caption.7}{Bibliograf\355a}{}% 26

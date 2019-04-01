@@ -6,6 +6,24 @@ Bitcoin mining now consuming more electricity than 159 countries.
 \newblock Accessed: 2018-11-13. (Archived by WebCite at
   \url{http://www.webcitation.org/73uNlJOrn}).
 
+\bibitem{fastecdsa}
+Documentación librería fastecdsa.
+\newblock \url{https://pypi.org/project/fastecdsa/}.
+\newblock Accessed: 2018-11-13. (Archived by WebCite at
+  \url{http://www.webcitation.org/73uOA1nmI}).
+
+\bibitem{hashlib}
+Documentación librería hashlib de python.
+\newblock \url{https://docs.python.org/2/library/hashlib.html}.
+\newblock Accessed: 2018-11-13. (Archived by WebCite at
+  \url{http://www.webcitation.org/73uO4Hti7}).
+
+\bibitem{multiprocessing}
+Documentación librería hashlib de python.
+\newblock \url{https://docs.python.org/2/library/multiprocessing.html}.
+\newblock Accessed: 2018-11-13. (Archived by WebCite at
+  \url{http://www.webcitation.org/73uNs8AP7}).
+
 \bibitem{pos}
 Proof of stake faq.
 \newblock

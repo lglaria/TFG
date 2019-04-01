@@ -62,13 +62,42 @@ Se incluye también el algoritmo de verificación que deben utilizar los nodos p
 \end{algorithmic}
 \end{algorithm}
 
+\begin{figure}[H]
+%\centering
+  \subfloat[Proceso pow (cambiar esta imagen (rehacer en python)]{{\includegraphics[width=12cm]{figures/process_to_modify.png}}}%
+  \qquad
+  %\caption{Cálculo de $P+Q=R$}
+  %\caption{Cálculo de $2P$ y $-P$}
+	\label{fig:flux}%
+\end{figure}
+
 La dificultad del puzzle, es decir, la condición que se le pide al valor hash del bloque para ser aceptado, en general no se mantiene fija. Cada determinado número de bloques (fijado en el protocolo) se vuelve a calcular este valor usando cierta función dependiente de la dificultad actual del puzzle. De esta forma según crece la cadena es necesario invertir más recursos en añadir un nuevo bloque.
 % Crear un tkinter en python donde se pueden hacer pruebas e incluirlo en el apéndice.
-\section{Uso de GPUs}
+\section{Uso de GPUs} %cambiar a hardware o algo asi
 El algoritmo de prueba de trabajo antes descrito se puede implementar usando computación paralela. De hecho esta es en general la forma más óptima\footnote{\url{https://en.bitcoin.it/wiki/Why_a_GPU_mines_faster_than_a_CPU}} de implementarlo, pues cada procesador se encarga por separado de "barrer" cierto grupo de posibles valores para encontrar la solución del puzzle. Por este motivo el proceso de minado en gran parte de las criptomonedas se suele realizar en GPU: Graphic Processing Unit, por la presencia de mayores opciones de paralelización.
 
 Esto, por otro lado contribuyó el aumento del precio de las tarjetas gráficas\footnote{https://cointelegraph.com/news/report-analyst-finds-nvidia-earned-135-billion-more-in-total-crypto-revenue-than-stated (buscar otra)}
 Una alternativa a las GPUs es el uso de circuitos integrados de aplicación específica o ASIC por sus siglas en inglés (application-specific integrated circuit) diseñados para minar de forma óptima ciertas criptomonedas. Existen sin embargo variantes del algoritmo de prueba de trabajo que introducen cierta resistencia tanto al minado a través de ASIC como mediante GPU \footnote{https://coincentral.com/asic-gpu-cpu-mining/}
+\section{Resistencia a ASIC}
+%hablar un poco de la asic
+Con el aumento en la popularidad del Bitcoin, y de otras criptomonedas similares, se generalizo el uso de hardware dedicado exclusivamente al minado. El desarrollo de esta clase de hardware ha hecho que resulte prácticamente imposible utilizar ordenadores de uso doméstico durante el proceso de minado, lo que llevado a multiples usuarios a dejar de participar en el proceso de creación y validación de la cadena de bloques, delegando en terceros este proceso. Esta delegación de la confianza en una tercera entidad va en contra de los principios fundamentales del Blockchain. Se tienen entonces dos problemas fundamentales: por un lado el desarrollo de hardware especifico que en la práctica excluye a una parte de los usuarios de participar en el algoritmo de prueba de trabajo, por otro lado, este algoritmo hace posible delegar en otra entidad (los llamados mineros) el proceso de creación de nuevos bloques en la cadena, haciendo que parte de los usuarios no participen activamente en el proceso.
+\begin{figure}[H]
+%\centering
+  \subfloat[Ejemplo de dispositivo ASIC (Fuente: amazon.com)]{{\includegraphics[width=12cm]{figures/asic.jpg}}}%
+  \qquad
+  %\caption{Cálculo de $P+Q=R$}
+  %\caption{Cálculo de $2P$ y $-P$}
+	\label{fig:test}%
+\end{figure}
+Estos son los motivos del desarrollo de algoritmos resistentes al minado mediante ASIC’S y que a su vez intentan minimizar la creación de nodos dedicados exclusivamente a este proceso, como las llamadas mining pools del Bitcoin. Uno de los principales algoritmos cuyo objetivo es combatir estos problemas es Hashimoto (http://diyhpl.us/~bryan/papers2/bitcoin/meh/hashimoto.pdf). Se trata este de un algoritmo basado en E/S, otros algoritmos creados para este fin se basaban por ejemplo en el mayor uso de memoria, pero para estos con el tiempo ha ido surgiendo hardware especifico.
+
+ La idea base detrás de Hashimoto no es hacer un algoritmo que sea resistente a ASIC, sino un algoritmo que funcione de forma óptima en ordenadores de uso doméstico, basado en el hecho que los límites de lectura-escritura son un problema estudiado durante años en el campo de la computación y es poco probable que el minado de monedas produzca avances significativos en esta área, y en caso de producirlos su trascendencia seria tal que impactarían en la industria del hardware en general.
+Tanto en el caso de del algoritmo Hashimoto, como en el algoritmo de prueba de trabajo visto antes (cita) un valor hash correcto es aquel que cumple que su longitud es menor que cierto valor dado, es decir, que el valor hash empieza por n-ceros.
+
+Este valor hash resulta de aplicar cierta función hash (sha-256 en el caso del Bitcoin) a el bloque anterior, raíz merkle y cierto nonce. La raíz Merkle está basada en las transacciones del bloque que se quiere incluir. Aumentar la velocidad de calculo de posibles valores de la función sha-256, o paralelizar estas operaciones, es lo que se consigue con las ASICs y lo que las hace tan efectivas.
+Hasta este punto Hashimoto y el método de prueba de trabajo visto antes coinciden. En lugar de detenerse en el valor hash obtenido hasta este punto (llamémosle hash1) en Hashimoto se realiza un segundo procesado de los datos. El conjunto de transacciones almacenados en la cadena de bloques puede considerarse ordenado. Por ejemplo la transacción número 10 del bloque 11 , podría tener el índice numero 560.
+
+
 \section{Bifurcaciones}\label{cap3:bifurcaciones}
 Cuando se envían por la red varias versiones correctas del siguiente bloque los nodos pueden recibirlas en diferente orden. Por protocolo incluirán la primera que han recibido, así que puede ocurrir que la cadena de bloques deje de ser única. Para resolver este problema cada nodo almacena las otras versiones del último bloque que ha recibido, aunque solo considere como buena una de ellas. Con el cálculo de un nuevo bloque alguna versión se hará mas extensa que las otras (tendrá un bloque nuevo) y en este caso todos los nodos que estuvieran en una rama distinta de la cadena cambiarán a la versión más larga.
 

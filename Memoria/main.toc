@@ -10,12 +10,18 @@
 \contentsline {section}{\numberline {3.2}Configuraci\IeC {\'o}n de la red}{10}{section.3.2}
 \contentsline {section}{\numberline {3.3}Cadena de bloques}{11}{section.3.3}
 \contentsline {section}{\numberline {3.4}Algoritmo de prueba de trabajo}{11}{section.3.4}
-\contentsline {section}{\numberline {3.5}Uso de GPUs}{13}{section.3.5}
-\contentsline {section}{\numberline {3.6}Bifurcaciones}{14}{section.3.6}
-\contentsline {section}{\numberline {3.7}Alternativas a la prueba de trabajo}{14}{section.3.7}
-\contentsline {section}{\numberline {3.8}Privacidad y seguridad}{16}{section.3.8}
-\contentsline {chapter}{\numberline {4}El problema del consenso}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}El problema de los generales bizantinos}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Soluci\IeC {\'o}n desde el Blockchain}{18}{section.4.2}
-\contentsline {section}{\numberline {4.3}Limitaciones del Blockchain}{18}{section.4.3}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{19}{section.4.3}
+\contentsline {section}{\numberline {3.5}Uso de GPUs}{14}{section.3.5}
+\contentsline {section}{\numberline {3.6}Resistencia a ASIC}{15}{section.3.6}
+\contentsline {section}{\numberline {3.7}Bifurcaciones}{16}{section.3.7}
+\contentsline {section}{\numberline {3.8}Alternativas a la prueba de trabajo}{17}{section.3.8}
+\contentsline {section}{\numberline {3.9}Privacidad y seguridad}{18}{section.3.9}
+\contentsline {chapter}{\numberline {4}El problema del consenso}{20}{chapter.4}
+\contentsline {section}{\numberline {4.1}El problema de los generales bizantinos}{20}{section.4.1}
+\contentsline {section}{\numberline {4.2}Soluci\IeC {\'o}n desde el Blockchain}{21}{section.4.2}
+\contentsline {section}{\numberline {4.3}Limitaciones del Blockchain}{21}{section.4.3}
+\contentsline {chapter}{\numberline {5}Implementaci\IeC {\'o}n del protocolo blockchain}{23}{chapter.5}
+\contentsline {section}{\numberline {5.1}Caracter\IeC {\'\i }sticas de la implementaci\IeC {\'o}n}{23}{section.5.1}
+\contentsline {section}{\numberline {5.2}Aspectos t\IeC {\'e}cnicos.}{24}{section.5.2}
+\contentsline {section}{\numberline {5.3}Seguridad de la implementaci\IeC {\'o}n y posibles mejoras.}{24}{section.5.3}
+\contentsline {section}{\numberline {5.4}C\IeC {\'a}lculos sobre el algoritmo de prueba de trabajo}{25}{section.5.4}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{26}{figure.caption.7}
