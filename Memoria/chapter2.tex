@@ -18,7 +18,7 @@ La criptografía de clave pública se fundamentan en la generación de una dupla
 Para especificar el principal algoritmo de clave pública usado en el blockchain (el ECDSA Elliptic Curves Digital Signature Algorithm) y explicar con más detalle el funcionamiento del proceso de autenticación hay que definir una serie de conceptos criptográficos y algebraicos. 
 \section{Curvas elípticas y ley de grupo}\label{curvas_grupo}
 \theoremstyle{definition}\begin{definition}[Curva elíptica]\label{curv_ellipt}
-Una curva elíptica sobre un cuerpo $\mathbb{K}$ queda definida por la ecuación \[y^2 +a_1xy+a_3 y = x^3 +a_2x^2 +a_4x +a_6\] con $a_i$ elementos del cuerpo tales que el discriminante de la curva sea distinto de cero.\end{definition} Para los algoritmos que vamos a estudiar nos restringiremos a los casos en que $\mathbb{K}$ sea un cuerpo finito de característica $p$, con $p$ un número primo distinto de 2 o 3. Bajo estas condiciones, y haciendo un cambio de variable, la ecuación general de una curva elíptica se puede reescribir como \begin{equation} \label{elliptic}y^2 = x^3 + ax + b \end{equation} Y para que el discriminante sea distinto de cero los coeficientes $a$ y $b$ deben cumplir $4a^3 + 27b^2 \not\equiv 0(\textrm{mod}\ p)$ En lo adelante cuando se hable de una curva elíptica nos estaremos refiriendo a \ref{elliptic} sobre un cuerpo primo de característica distinta de 2 o 3, aunque para visualizar algunas operaciones debamos suponer la curva definida sobre $\mathbb{R}$
+Una curva elíptica sobre un cuerpo $\mathbb{K}$ queda definida por la ecuación \[y^2 +a_1xy+a_3 y = x^3 +a_2x^2 +a_4x +a_6\] con $a_i$ elementos del cuerpo tales que el discriminante de la curva sea distinto de cero.\end{definition} Para los algoritmos que vamos a estudiar nos restringiremos a los casos en que $\mathbb{K}$ sea un cuerpo finito de característica $p$, con $p$ un número primo distinto de 2 o 3. Bajo estas condiciones, y haciendo un cambio de variable, la ecuación general de una curva elíptica se puede reescribir como \begin{equation} \label{elliptic}y^2 = x^3 + ax + b \end{equation} Y para que el discriminante sea distinto de cero los coeficientes $a$ y $b$ deben cumplir $4a^3 + 27b^2 \not\equiv 0(\textrm{mod}\ p)$ En lo adelante cuando se hable de una curva elíptica nos estaremos refiriendo a \ref{elliptic} sobre un cuerpo primo de característica distinta de 2 o 3, aunque para dibujar la curva o visualizar algunas operaciones debamos suponer que la tenemos definida sobre un cuerpo de característica 0 como por ejemplo $\mathbb{R}$
 
 A los pares $(x,y)$ que cumplen \ref{elliptic} se les añade el punto del infinito y sobre esta estructura proyectiva se define la operación de suma y calculo del inverso como sigue:
 \begin{description}
@@ -50,8 +50,14 @@ Esta definición geométrica de las operaciones se aprecia mejor trabajando sobr
 A partir de la definición anterior de las operaciones no es difícil ver que el punto del infinito es el elemento neutro de la suma, que esta operación de suma es conmutativa y que existe el inverso de todo elemento. Sin embargo que la suma está cerrada con esta definición y que se cumple la propiedad asociativa no son resultados inmediatos. Una prueba de esto se puede consultar en \citep{group_law} y en \citep{group_law_verrill} 
 %http://www.math.ku.dk/~kiming/lecture_notes/2000-2001-elliptic_curves/grouplaw.pdf 
 
-Al cumplirse las cuatro propiedades anteriores tenemos que la suma así definida induce un grupo sobre los puntos de la curva elíptica. Sea $(G,+)$ este grupo y $n=|G|$ su orden. Sabemos que $n$ no es infinito pues la curva está definida sobre $\mathbb{K}$ un cuerpo finito, y por tanto sus puntos vendrán dados por $\{(x,y)| y^2 \equiv x^3 + ax + b  (mod  p) \}$. Tenemos por tanto un grupo finito en el que podemos encontrar algún subgrupo cíclico. Un subgrupo cíclico tiene orden $q$ siendo $q$ un primo tal que que $q|n$. Si $n$ es primo decimos entonces que $|G|$ es un grupo cíclico. %meter teorema de cauchy para ver la existencia de este subgrupo ciclico
-Será sobre este subgrupo cíclico sobre el que se definan los protocolos criptográficos que veremos.
+Al cumplirse las cuatro propiedades anteriores tenemos que la suma así definida induce un grupo abeliano sobre los puntos de la curva elíptica. Sea $(G,+)$ este grupo y $n=|G|$ su orden. Sabemos que $n$ no es infinito pues la curva está definida sobre $\mathbb{K}$ un cuerpo finito, y por tanto sus puntos vendrán dados por $\{(x,y)| y^2 \equiv x^3 + ax + b  (mod  p) \}$. 
+\theoremstyle{theorem}\begin{theorem}[Teorema de Cauchy]\label{cauchy} Sea G un grupo finito y q un primo. Si q divide al orden de G entonces existe un elemento de G de orden q.
+\end{theorem}
+Tenemos por tanto un grupo finito, donde a consecuencia del Teorema de Cauchy para grupos \ref{cauchy} podemos encontrar un elemento de orden primo $q$ (si $n = |G|$ ya es primo basta tomar $q = n$) Este elemento $g$ de $G$ genera un subgrupo cíclico ($<q>$) que será sobre el que se definan los protocolos criptográficos que veremos.
+
+
+%Un subgrupo cíclico tiene orden $q$ siendo $q$ un primo tal que que $q|n$. Si $n$ es primo decimos entonces que $|G|$ es un grupo cíclico. %meter teorema de cauchy para ver la existencia de este subgrupo ciclico
+%Será sobre este subgrupo cíclico sobre el que se definan los protocolos criptográficos que veremos.
 
 \section{Funciones Hash}\label{hash}
 Antes de ver el algoritmo ECDSA hay que definir el concepto de función hash y ver alguna de sus propiedades.
@@ -61,11 +67,11 @@ Aunque se hable de longitudes arbitrarias pueden existir limitaciones técnicas 
 
 Una primera consecuencia de la definición \ref{hash_def} es que la preimagen de una función hash tiene cardinal estrictamente mayor que su imagen. Por tanto, por el principio del palomar, tendremos que si $A$ es el conjunto preimagen de cierta función hash $H$ y $B$ es su imagen para todo $b \in B$  $\exists \{a_{1},a_{2}\}$ con $a_{i} \in A$ distintos tales que $H^{-1}(b) = a_i$. Este fenómeno se llama colisión y se define en la resistencia a colisiones de una función hash como la probabilidad de encontrar un par $(a_{0},a_{1})$ con $a_{0} \not= a_{1}$ tales que se cumpla  $H(a_{0}) = H(a_{1})$. A toda función hash $H$, que usemos en el protocolo blockchain o en el algoritmo ECDSA, le pediremos que ningún algoritmo pueda encontrar una colisión para $H$ en tiempo polinómico, en este caso diremos que $H$ es resistente a colisiones. Otras dos propiedades importantes de las funciones hash serán la resistencia a preimágenes y a segundas preimágenes. La primera de estas propiedades viene a decir que debe ser \textit{díficil} dado un $b$ en el espacio de llegada encontrar un $a$ en el espacio de partida tal que $H(a) = b$. La segunda propiedad es similar a la definición de resistencia a colisiones, dado un $a_{0}$ elegido de forma aleatoria debe ser \textit{díficil} encontrar un $a_{1}$ distinto de $a_{0}$ tal que $H(a_{0}) = H(a_{1})$. Esta noción de \textit{difícil} viene dada por la imposibilidad de resolver en tiempo polinómico cualquiera de estos problemas.
 
-La propiedad de resistencia a segundas preimágenes es  más fuerte que la resistencia a colisiones como consecuencia de la paradoja del cumpleaños. En efecto, si suponemos cadenas binarias y una longitud hash de $n$ nuestra función devolverá exactamente $2^{n}$ cadenas distintas. Dadas $l$ cadenas elegidas al azar la probabilidad de no tener una colisión viene dada por:
+La propiedad de resistencia a segundas preimágenes es  más fuerte que la resistencia a colisiones como consecuencia de la paradoja del cumpleaños. En efecto, si suponemos cadenas binarias y una longitud hash de $n$ nuestra función devolverá exactamente $2^{n}$ cadenas distintas. Dadas $l$ cadenas elegidas al azar la probabilidad de no encontrar una colisión viene dada por:
 \begin{equation}
 NC(n,l) = \frac{2^{n}}{2^{n}}\frac{2^{n}-1}{2^{n}}\ldots\frac{2^{n}-(l-2)}{2^{n}}\frac{2^{n}-(l-1)}{2^{n}} = \prod_{i=0}^{l-1}(1-\frac{i}{2^{n}})
 \end{equation} 
-Así que la probabilidad de tener una colisión $C(2^{n},l)$ será su complementario:
+Así que la probabilidad de encontrar una colisión $C(2^{n},l)$ será su complementario:
 \begin{equation}
 C(n,l) = 1-\prod_{i=0}^{l-1}(1-\frac{i}{2^{n}})
 \end{equation}
@@ -78,7 +84,9 @@ Tomando logaritmos y despejando se tiene que:
 \begin{equation}
 l \approx \sqrt{-2\log(1-C(n,l))}2^{n/2}
 \end{equation}
-Si se considera una probabilidad $C(n,l)$ de 0.5 entonces esa raíz cuadrada es aproximadamente 1 y por tanto $l \approx 2^{n/2}$. Tomando $2n = 365$ se obtiene el problema del cumpleaños: para garantizar una colisión (dos individuos que cumplan años el mismo día) con una probabilidad del $50\%$ basta con reunir 22 personas, este resultado es mucho menor que el valor que podríamos dar intuitivamente, de ahí que se le llame paradoja aunque desde el punto de vista estrictamente lógico no lo sea.
+Si se considera una probabilidad $C(n,l)$ de 0.5 entonces esa raíz cuadrada es aproximadamente 1 y por tanto $l \approx 2^{n/2}$. 
+
+Tomando $2n = 365$ se obtiene el problema del cumpleaños: para garantizar una colisión (dos individuos que cumplan años el mismo día) con una probabilidad del $50\%$ basta con reunir 22 personas, este resultado es mucho menor que el valor que podríamos dar intuitivamente, de ahí que se le llame paradoja aunque desde el punto de vista estrictamente lógico no lo sea.
 
  Sin embargo, la probabilidad de encontrar una segunda preimagen comprobando solo $2^{n/2}$ cadenas es de 
 $2^{n/2}/2^{n} = 1/2^{n/2}$, que para n = 64 es prácticamente cero. Para garantizar una probabilidad de al menos el 0.5 se tiene que:
@@ -87,7 +95,8 @@ k=\frac{1}{2}2^{n} = 2^{n-1} \approx 2^{n}
 \end{equation}
 Donde k es el número de cadenas que hay que estudiar. En este caso el coste es prácticamente el mismo que el de comprobar todas las posibles cadenas que produce nuestra función hash.
 
-Hay que señalar que los cálculos anteriores solo son válidos bajo ciertos supuestos teóricos que en la práctica no se dan, pues ninguna función hash lleva los elementos del espacio de partida al de llegada siguiendo patrones completamente aleatorios. Una vez han sido encontradas colisiones (o se ha probado que la probabilidad de encontrarlas es \textit{alta}) la función hash deja de ser considerada segura. Un ejemplo de función hash en esta categoría es SHA-1, para la que se conocen colisiones desde 2017 \citep{sha-1}, aunque era considerada insegura desde 2005. La función hash que usaremos (SHA-256) es considerada segura por el momento.
+Hay que señalar que los cálculos anteriores solo son válidos bajo ciertos supuestos teóricos que en la práctica no se dan, pues ninguna función hash lleva los elementos del espacio de partida al de llegada siguiendo patrones completamente aleatorios. Una vez han sido encontradas colisiones (o se ha probado que la probabilidad de encontrarlas es \textit{alta}) la función hash deja de ser considerada segura. Un ejemplo de función hash en esta categoría es SHA-1, para la que se conocen colisiones desde 2017 \citep{sha-1}, aunque era considerada insegura desde 2005. 
+La función hash que usaremos (SHA-256) es considerada segura por el momento.
 
 
 %Referencias: http://web.cs.ucdavis.edu/~rogaway/papers/relates.pdf
@@ -106,11 +115,13 @@ Hay que señalar que los cálculos anteriores solo son válidos bajo ciertos sup
 %Referencia (además del libro) https://pdfs.semanticscholar.org/c06a/d6512775be1076e4abd43e3f2928729da776.pdf
 %https://www.ietf.org/rfc/rfc6979.txt
 
-Ahora podemos especificar el algoritmo ECDSA (Elliptic Curve Digital Signature Algorithm)\citet{elliptic_cripto}, tanto el usado para la firma de mensajes como el correspondiente algoritmo de verificación. Este algoritmo se sustenta en la dificultad computacional de resolver el problema del logaritmo discreto para curvas elípticas (ECDLP).
+Ahora podemos especificar el algoritmo ECDSA (Elliptic Curve Digital Signature Algorithm)\citet{elliptic_cripto}, tanto el usado para la firma de mensajes como el correspondiente algoritmo de verificación. Este algoritmo se basa en la dificultad computacional de resolver el problema del logaritmo discreto para curvas elípticas (ECDLP).
 
 \theoremstyle{definition}\begin{definition}[Problema del logaritmo discreto para curvas elípticas]\label{ecdlp} Sea $E(\mathbb{K})$ una curva elíptica sobre un cuerpo $\mathbb{K}$. Sea $P \in E(\mathbb{K})$ y $Q \in <P>$. Encontrar $k$ tal que $Q= kP$. \end{definition}
 
-La definición anterior tiene sentido pues como se vio en \ref{curvas_grupo} los puntos de una curva elíptica definida sobre un cuerpo finito forman un grupo. No se conoce algoritmo que resuelva este problema en tiempo subexponencial \citep{discrete_log}. Sin embargo, aunque aquí no serán especificados se necesitan algoritmos apropiados para crear y representar el cuerpo finito $\mathbb{F}_{p}$ de forma que se garantice la intratabilidad de este problema.
+La definición anterior tiene sentido pues como se vio en \ref{curvas_grupo} los puntos de una curva elíptica definida sobre un cuerpo finito forman un grupo. En este caso $<P>$ es el subgrupo ciclico generado por el elemento $P$ de la curva. 
+
+No se conoce algoritmo que resuelva este problema en tiempo subexponencial \citep{discrete_log}. Sin embargo, aunque aquí no serán especificados se necesitan algoritmos apropiados para crear y representar el cuerpo finito $\mathbb{F}_{p}$ de forma que se garantice la intratabilidad de este problema.
 %El orden de una curva elíptica $E$ sobre un cuerpo finito $\mathbb{F}_{p}$ (número de puntos) es importante para garantizar la seguridad de este algoritmo.
 
 Antes de poder firmar un mensaje hay que generar las claves públicas y privada.
@@ -126,7 +137,6 @@ Sea $P = (x_{1},y_{1})$ un punto de la curva elíptica $E(\mathbb{F}_{p})$ que g
 \State  $Q$ es la clave pública y $d$ la clave privada.
 \end{algorithmic}
 \end{algorithm}
-
 
 
 Una vez se ha generado la clave privada y utilizando una función hash $H$ que devuelva cadenas de longitud menor o igual que $n$ se pueden firmar mensajes usando el algoritmo \ref{alg:firmar}
@@ -156,5 +166,9 @@ Ahora, quien recibe un mensaje $m$ con la firma $(r,s)$ puede verificar su proce
 \State Si $v = r$ \textbf{se acepta la firma}, en otro caso \textbf{se rechaza la firma}
 \end{algorithmic}
 \end{algorithm}
+
+La importancia de la resistencia a colisiones en la función hash $H$ queda explicada con los algoritmos anteriores.
+La existencia de colisones conocidas (o facilmente calculables) hace que ya no sea posible garantizar la validez de una firma. Un atacante podría usar un mensaje firmado, buscar alguna modificacion de este mensaje que combinada con la firma devuelva el mismo valor hash que en el original. Ahora quien verifique este mensaje falso seria incapaz de distinguirlo del original.
+(Poner imagen de https://shattered.it/ como ejemplo de colision)
 
 %mirar https://webusers.imj-prg.fr/~ricardo.perez-marco/blockchain/BitcoinP7.pdf en los referente a hash
