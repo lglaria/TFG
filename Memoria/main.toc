@@ -12,9 +12,9 @@
 \contentsline {section}{\numberline {3.4}\IeC {\'A}rboles Merkle}{12}{section.3.4}
 \contentsline {section}{\numberline {3.5}Algoritmo de prueba de trabajo}{13}{section.3.5}
 \contentsline {section}{\numberline {3.6}Resistencia a ASIC}{15}{section.3.6}
-\contentsline {section}{\numberline {3.7}Uso de GPUs}{17}{section.3.7}
+\contentsline {section}{\numberline {3.7}Uso de GPUs}{18}{section.3.7}
 \contentsline {section}{\numberline {3.8}Bifurcaciones}{18}{section.3.8}
-\contentsline {section}{\numberline {3.9}Alternativas a la prueba de trabajo}{18}{section.3.9}
+\contentsline {section}{\numberline {3.9}Alternativas a la prueba de trabajo}{19}{section.3.9}
 \contentsline {section}{\numberline {3.10}Privacidad y seguridad}{20}{section.3.10}
 \contentsline {chapter}{\numberline {4}El problema del consenso}{22}{chapter.4}
 \contentsline {section}{\numberline {4.1}El problema de los generales bizantinos}{22}{section.4.1}
@@ -23,6 +23,7 @@
 \contentsline {chapter}{\numberline {5}Implementaci\IeC {\'o}n del protocolo blockchain}{25}{chapter.5}
 \contentsline {section}{\numberline {5.1}Caracter\IeC {\'\i }sticas de la implementaci\IeC {\'o}n}{25}{section.5.1}
 \contentsline {section}{\numberline {5.2}Aspectos t\IeC {\'e}cnicos.}{26}{section.5.2}
-\contentsline {section}{\numberline {5.3}Seguridad de la implementaci\IeC {\'o}n y posibles mejoras.}{27}{section.5.3}
-\contentsline {section}{\numberline {5.4}C\IeC {\'a}lculos sobre el algoritmo de prueba de trabajo}{28}{section.5.4}
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{29}{figure.caption.9}
+\contentsline {section}{\numberline {5.3}Seguridad de la implementaci\IeC {\'o}n y posibles mejoras.}{26}{section.5.3}
+\contentsline {section}{\numberline {5.4}C\IeC {\'a}lculos sobre el algoritmo de prueba de trabajo}{27}{section.5.4}
+\contentsline {chapter}{\numberline {6}Conclusiones}{29}{chapter.6}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{29}{chapter.6}
