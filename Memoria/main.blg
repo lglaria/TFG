@@ -1,7 +1,6 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
-Warning--I didn't find a database entry for "sha-256"
 Warning--to sort, need author or key in electricidad
 Warning--to sort, need author or key in pos
 Warning--to sort, need author or key in pob
@@ -11,4 +10,4 @@ Warning--to sort, need author or key in multiprocessing
 Warning--empty journal in hashcash
 Warning--empty journal in bitcoin
 Warning--empty journal in raft
-(There were 10 warnings)
+(There were 9 warnings)

@@ -49,9 +49,9 @@ John William~Scott Cassels and John William~Scott Cassels.
 \newblock Cambridge University Press, 1991.
 
 \bibitem{elliptic_cripto}
-A.~Menezes D.~Hankerson, S.~Vanstone.
+S.~Vanstone D.~Hankerson, A.~Menezes.
 \newblock {\em Guide to Elliptic Curve Cryptography}.
-\newblock Springer, New York, NY, 2004.
+\newblock Springer, 2004.
 
 \bibitem{blockchain_consensus}
 Vincent Gramoli.
@@ -93,6 +93,11 @@ Satoshi Nakamoto et~al.
 Diego Ongaro and John Ousterhout.
 \newblock Raft consensus algorithm.
 \newblock 2015.
+
+\bibitem{sha256}
+FIPS PUB.
+\newblock Secure hash standard (shs).
+\newblock {\em FIPS PUB}, 180(4), 2012.
 
 \bibitem{sha-1}
 Marc Stevens, Elie Bursztein, Pierre Karpman, Ange Albertini, and Yarik Markov.
