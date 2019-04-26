@@ -1,0 +1,17 @@
+1. Cambiar enlaces segun lo que me dijo Luis (faltan 6)
+2. Extender a un capitulo mas (hecho)
+3. Crear una especie de guia de como quiero que sea el trabajo
+4. Homogeneizar el tema de las definiciones (hecho)
+5. Revisar las fuentes (paquetes) de latex y usar una unica.
+
+Actualizacion 3-dic
+
+1.Comentar el codigo siguiendo lo que me ha enseñado Luis (mirar en Spider)
+2. Avanzar en el readme de git
+3. Meter la memoria en el repositorio git
+4. Pasar el codigo de python 2.7 a python 3
+5. Pasar todo, comentarios incluidos a ingles
+
+New Update
+1. Change format bibliography
+2. GPU´s en blockchain/bitcoin

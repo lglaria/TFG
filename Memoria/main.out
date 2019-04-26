@@ -10,19 +10,23 @@
 \BOOKMARK [1][-]{section.3.3}{Cadena de bloques}{chapter.3}% 10
 \BOOKMARK [1][-]{section.3.4}{\301rboles Merkle}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.5}{Algoritmo de prueba de trabajo}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.6}{Resistencia a ASIC}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.7}{Uso de GPUs}{chapter.3}% 14
-\BOOKMARK [1][-]{section.3.8}{Bifurcaciones}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.9}{Alternativas a la prueba de trabajo}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.10}{Privacidad y seguridad}{chapter.3}% 17
-\BOOKMARK [0][-]{chapter.4}{El problema del consenso}{}% 18
-\BOOKMARK [1][-]{section.4.1}{El problema de los generales bizantinos}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.2}{Soluci\363n desde el Blockchain}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.3}{Limitaciones del Blockchain}{chapter.4}% 21
-\BOOKMARK [0][-]{chapter.5}{Implementaci\363n del protocolo blockchain}{}% 22
-\BOOKMARK [1][-]{section.5.1}{Caracter\355sticas de la implementaci\363n}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.2}{Aspectos t\351cnicos.}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.3}{Seguridad de la implementaci\363n y posibles mejoras.}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.4}{C\341lculos sobre el algoritmo de prueba de trabajo}{chapter.5}% 26
-\BOOKMARK [0][-]{chapter.6}{Conclusiones}{}% 27
-\BOOKMARK [0][-]{chapter.6}{Bibliograf\355a}{}% 28
+\BOOKMARK [1][-]{section.3.6}{Escalabilidad del blockchain}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.7}{Resistencia a ASIC}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.8}{Uso de GPUs}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.9}{Bifurcaciones}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.10}{Alternativas a la prueba de trabajo}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.11}{Privacidad y seguridad}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{El problema del consenso}{}% 19
+\BOOKMARK [1][-]{section.4.1}{El problema de los generales bizantinos}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.2}{Soluci\363n desde el Blockchain}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.3}{Limitaciones del Blockchain}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{Implementaci\363n del protocolo blockchain \(hacer referencia a lo que hecho, sistema de gesti\363n de documentos\)}{}% 23
+\BOOKMARK [1][-]{section.5.1}{Librer\355as utilizadas}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.2}{Caracter\355sticas de la implementaci\363n}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.3}{Aspectos t\351cnicos.}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.4}{Seguridad de la implementaci\363n y posibles mejoras.}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.5}{C\341lculos sobre el algoritmo de prueba de trabajo}{chapter.5}% 28
+\BOOKMARK [0][-]{chapter.6}{Conclusiones}{}% 29
+\BOOKMARK [1][-]{section.6.1}{Discusi\363n plan de estudios}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.2}{Ideas finales y posible trabajo futuro}{chapter.6}% 31
+\BOOKMARK [0][-]{section.6.2}{Bibliograf\355a}{}% 32
