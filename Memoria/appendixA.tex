@@ -6,6 +6,8 @@ Siguiendo las ideas planteadas en \ref{cap3} se ha realizado una implementación
 
 Esta implementación funciona como un gestor de documentos donde se aprovecha el carácter inmutable de la estructura de cadena de bloques. Los participantes enviarán información en formato de cadena de caracteres, que bien puedan ser artículos, trabajos o cualquier otra clase de texto que desean almacenar. Esta información va debidamente firmada usando cierta clave privada, incluyéndose también la clave pública que permite verificar la firma. Utilizando el algoritmo de prueba de trabajo visto en \ref{chap3:pow} los nodos transformarán esta información en bloques de forma que se pueda tener un registro que sirva para probar que un trabajo fue verificado y existía desde un momento de tiempo concreto.
 
+Esta implementación puede ser utilizada en un entorno real haciendo ciertas modificaciones, como se verá más adelante. Por ejemplo, la estructura enlazada de la cadena de bloques puede ser utilizada a manera de índices consecutivos en tablas SQL de forma que los nuevos \textit{inserts} que se hagan sean validados por los índices existentes en la tabla.
+
 
 La implementación se encuentra disponible en el repositorio de Github \url{https://github.com/lglaria/TFG}
 
@@ -13,7 +15,62 @@ La implementación se encuentra disponible en el repositorio de Github \url{http
 %La solución anterior tiene menos sentido en nuestro caso, en el que el bucle del algoritmo de prueba de trabajo tiene un propósito. Sin embargo, en otro entorno sí que podría ser útil esta implementación. Se podrían implementar ambas,
 \section{Librerías utilizadas}
 En la realización de este código se han utilizado las siguientes librerías:
-Aquí no solo listar las librerías, sino también explicar en que consisten, como están implementadas y demás, mirando su documentación.
+\begin{itemize}
+\item \textit{multiprocessing}\cite{multiprocessing} Este paquete permite generar procesos que ofrecen concurrencia tanto local (en la misma máquina aprovechando los múltiples hilos (threads) de los procesadores actuales), así como concurrencia remote, en caso de máquinas conectadas a través de una red. Este paquete funciona tanto en sistemas Unix como Windows y está disponible tanto para Python 2 como para Python 3.
+Un ejemplo de como se crean nuevos procesos.
+\lstset{language=Python}
+\lstset{frame=lines}
+\lstset{caption={Ejemplo proceso}}
+\lstset{label={lst:multi_process}}
+\lstset{basicstyle=\footnotesize}
+\begin{lstlisting}[frame=single]
+from multiprocessing import Process
+
+def func(argument):
+    print('hello', argument)
+
+if __name__ == '__main__':
+    p = Process(target=func, args=('world',))
+    p.start()
+    p.join()
+\end{lstlisting}
+
+Esta librería permite controlar los procesos creados, ofreciendo así una solución de alto nivel a los problemas de concurrencia mediante el objeto manager.
+
+\item \textit{hashlib} \cite{hashlib} Esta librería implementa diversas funciones hash, entre las que se encuentran: SHA1, SHA224, SHA256, SHA384, y SHA512 entre otras. Para cada función hash invocada se crea un objeto con el mismo tipo de interfaz, por ejemplo si se invoca a \textit{sha256()} se creará un objeto de la función hash SHA256 para el que podrán por ejemplo calculares los valores hash que devuelve al aplicarle esta función a cierta cadena de caracteres.
+
+\item \textit{fastecdsa} \cite{fastecdsa} Este paquete implementa protocolos criptográficos basados en curvas elípticas tal y como se vieron en el Capítulo 1 \ref{cap1} 
+
+Para ser utilizado debe ser instalado previamente mediante el comando $pip install fastecdsa$
+
+Ejemplo de generación de los pares de claves pública y privada
+\lstset{language=Python}
+\lstset{frame=lines}
+\lstset{caption={Generación claves pública y privada}}
+\lstset{label={lst:fastecdsa_keys}}
+\lstset{basicstyle=\footnotesize}
+\begin{lstlisting}[frame=single]
+from fastecdsa import keys, curve
+
+"""The reason there are two ways to generate a 
+keypair is that generating the public key requires
+a point multiplication, which can be expensive. 
+That means sometimes you may want to delay
+generating the public key until it is actually needed."""
+
+# generate a keypair (both keys) for curve P256
+priv_key, pub_key = keys.gen_keypair(curve.P256)
+
+# generate a private key for curve P256
+priv_key = keys.gen_private_key(curve.P256)
+
+# get the public key corresponding to the private key we just generated
+pub_key = keys.get_public_key(priv_key, curve.P256)
+\end{lstlisting}
+
+\end{itemize}
+
+
 \section{Características de la implementación}
 El algoritmo de consenso elegido ha sido el de prueba de trabajo, combinado con la elección de la cadena de bloques más larga en caso de tener varias alternativas disponibles.
 
