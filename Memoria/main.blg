@@ -1,13 +1,14 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
+Warning--to sort, need author or key in sha256_2
 Warning--to sort, need author or key in electricidad
 Warning--to sort, need author or key in pos
 Warning--to sort, need author or key in pob
-Warning--to sort, need author or key in fastecdsa
-Warning--to sort, need author or key in hashlib
 Warning--to sort, need author or key in multiprocessing
+Warning--to sort, need author or key in hashlib
+Warning--to sort, need author or key in fastecdsa
 Warning--empty journal in hashcash
 Warning--empty journal in bitcoin
 Warning--empty journal in raft
-(There were 9 warnings)
+(There were 10 warnings)

@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{sha256_2}
+\url{Descriptions of SHA-256, SHA-384, and SHA-512}.
+\newblock Accessed: 2019-08-21.).
+
 \bibitem{electricidad}
 Bitcoin mining now consuming more electricity than 159 countries.
 \newblock \url{https://powercompare.co.uk/bitcoin/}.
@@ -12,17 +16,17 @@ Documentación librería fastecdsa.
 \newblock Accessed: 2018-11-13. (Archived by WebCite at
   \url{http://www.webcitation.org/73uOA1nmI}).
 
-\bibitem{hashlib}
-Documentación librería hashlib de python.
-\newblock \url{https://docs.python.org/2/library/hashlib.html}.
-\newblock Accessed: 2018-11-13. (Archived by WebCite at
-  \url{http://www.webcitation.org/73uO4Hti7}).
-
 \bibitem{multiprocessing}
 Documentación librería hashlib de python.
 \newblock \url{https://docs.python.org/2/library/multiprocessing.html}.
 \newblock Accessed: 2018-11-13. (Archived by WebCite at
   \url{http://www.webcitation.org/73uNs8AP7}).
+
+\bibitem{hashlib}
+Documentación librería hashlib de python.
+\newblock \url{https://docs.python.org/2/library/hashlib.html}.
+\newblock Accessed: 2018-11-13. (Archived by WebCite at
+  \url{http://www.webcitation.org/73uO4Hti7}).
 
 \bibitem{pos}
 Proof of stake faq.
