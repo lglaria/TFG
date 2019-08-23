@@ -82,31 +82,37 @@ Una primera consecuencia de la definición \ref{hash_def} es que la preimagen de
 
 La propiedad de resistencia a segundas preimágenes es  más fuerte que la resistencia a colisiones como consecuencia de la paradoja del cumpleaños. En efecto, si suponemos cadenas binarias y una longitud hash de $n$ nuestra función devolverá exactamente $2^{n}$ cadenas distintas. Dadas $l$ cadenas elegidas al azar la probabilidad de no encontrar una colisión viene dada por:
 \begin{equation}
-NC(n,l) = \frac{2^{n}}{2^{n}}\frac{2^{n}-1}{2^{n}}\ldots\frac{2^{n}-(l-2)}{2^{n}}\frac{2^{n}-(l-1)}{2^{n}} = \prod_{i=0}^{l-1}(1-\frac{i}{2^{n}})
+NC(2^{n},l) = \frac{2^{n}}{2^{n}}\frac{2^{n}-1}{2^{n}}\ldots\frac{2^{n}-(l-2)}{2^{n}}\frac{2^{n}-(l-1)}{2^{n}} = \prod_{i=0}^{l-1}(1-\frac{i}{2^{n}})
 \end{equation} 
 Así que la probabilidad de encontrar una colisión $C(2^{n},l)$ será su complementario:
 \begin{equation}
-C(n,l) = 1-\prod_{i=0}^{l-1}(1-\frac{i}{2^{n}})
+C(2^{n},l) = 1-\prod_{i=0}^{l-1}(1-\frac{i}{2^{n}})
 \end{equation}
 Considerando que el cociente $i/2^{n}$ es cercano a cero, que es consecuencia de tomar $n$ suficientemente grande, y teniendo en cuenta que la expansión en Serie de Taylor de $e^{x}$ se puede truncar a partir del término cuadrático para $x \ll 1$. Tenemos que:
 \begin{equation}
-C(n,l) \approx 1- \prod_{i=0}^{l-1}\exp\left(\frac{-i}{2^{n}}\right) = 1- \exp\left(\sum_{i=0}^{l-1}\frac{-i}{2^{n}}\right)
+C(2^{n},l) \approx 1- \prod_{i=0}^{l-1}\exp\left(\frac{-i}{2^{n}}\right) = 1- \exp\left(\sum_{i=0}^{l-1}\frac{-i}{2^{n}}\right)
 \end{equation} 
 Este último sumatorio se puede escribir como $-(l-1)l/2^{n+1}$ usando la fórmula de la suma de los $(l-1)$ primeros naturales. Y que para $l$ suficientemente grande se puede aproximar a $-l^{2}/2^{n+1}$.
 Tomando logaritmos y despejando se tiene que:
 \begin{equation}
-l \approx 2^{n/2}\sqrt{-2\log(1-C(n,l))}
+l \approx 2^{n/2}\sqrt{-2\log(1-C(2^{n},l))}
 \end{equation}
-Si se considera una probabilidad $C(n,l)$ de 0.5 entonces esa raíz cuadrada es aproximadamente 1 y por tanto $l \approx 2^{n/2}$. 
+Si se considera una probabilidad $C(2^{n},l) = 0.5$, es decir que de un total de $2^{n}$ elementos distintos la probabilidad de encontrar en un grupo de $l$ elementos elegidos al azar al menos 2 iguales es del $50\%$  entonces se tiene que $\sqrt{-2\log(1-C(2^{n},l))}\approx 1.18$. Así  $l \approx 1.18*2^{n/2}$, que es el número mínimo de cadenas binarias necesarias para garantizar una colisión con una probabilidad del $50\%$
 
-Tomando $2n = 365$ se obtiene el problema del cumpleaños: para garantizar una colisión (dos individuos que cumplan años el mismo día) con una probabilidad del $50\%$ basta con reunir 22 personas, este resultado es mucho menor que el valor que podríamos dar intuitivamente, de ahí que se le llame paradoja aunque desde el punto de vista estrictamente lógico no lo sea.
 
- Sin embargo, la probabilidad de encontrar una segunda preimagen comprobando solo $2^{n/2}$ cadenas es de 
-$2^{n/2}/2^{n} = 1/2^{n/2}$, que para n = 64 es prácticamente cero. Para garantizar una probabilidad de al menos el 0.5 se tiene que:
+ Sin embargo, la probabilidad de encontrar una segunda preimagen comprobando solo $1.18\sqrt{2^{n}}$ cadenas es de 
+ \begin{equation}
+\frac{1.18\sqrt{2^{n}}}{2^{n}} = \frac{1.18}{2^{n/2}}
+\end{equation}
+Para $n > 20$ la probabilidad anterior prácticamente cero (Para función SHA-256 se tiene que $n = 256$).
+ Para garantizar una probabilidad de al menos el 0.5 se tiene que:
 \begin{equation}
 k=\frac{1}{2}2^{n} = 2^{n-1} \approx 2^{n}
 \end{equation}
-Donde k es el número de cadenas que hay que estudiar. En este caso el coste es prácticamente el mismo que el de comprobar todas las posibles cadenas que produce nuestra función hash.
+Siendo k es el número de cadenas que hay que estudiar. En este caso el coste es prácticamente el mismo que el de comprobar todas las posibles cadenas que produce nuestra función hash.
+
+Tomando $2n = 365$ se obtiene el problema del cumpleaños: para garantizar una colisión (dos individuos que cumplan años el mismo día) con una probabilidad del $50\%$ basta con reunir 22 personas, este resultado es mucho menor que el valor que podríamos dar intuitivamente, de ahí que se le llame paradoja aunque desde el punto de vista estrictamente lógico no lo sea.
+
 
 Hay que señalar que los cálculos anteriores solo son válidos bajo ciertos supuestos teóricos que en la práctica no se dan, pues ninguna función hash lleva los elementos del espacio de partida al de llegada siguiendo patrones completamente aleatorios. Una vez han sido encontradas colisiones (o se ha probado que la probabilidad de encontrarlas es \textit{alta}) la función hash deja de ser considerada segura. Un ejemplo de función hash en esta categoría es SHA-1, para la que se conocen colisiones desde 2017 \citep{sha-1}, aunque era considerada insegura desde 2005. 
 La función hash que usaremos (SHA-256) es considerada segura por el momento.

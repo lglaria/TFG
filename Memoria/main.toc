@@ -1,33 +1,33 @@
 \babel@toc {spanish}{}
-\contentsline {chapter}{\IeC {\'I}ndice}{\es@scroman {i}}{section*.1}% 
-\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n y objetivos.}{1}{chapter.1}% 
-\contentsline {chapter}{\numberline {2}Criptograf\IeC {\'\i }a y Blockchain}{3}{chapter.2}% 
-\contentsline {section}{\numberline {2.1}Curvas el\IeC {\'\i }pticas y ley de grupo}{3}{section.2.1}% 
-\contentsline {section}{\numberline {2.2}Funciones Hash}{5}{section.2.2}% 
-\contentsline {section}{\numberline {2.3}Algoritmo ECDSA}{7}{section.2.3}% 
-\contentsline {chapter}{\numberline {3}Especificaci\IeC {\'o}n del protocolo blockchain}{10}{chapter.3}% 
-\contentsline {section}{\numberline {3.1}Objetivos del Blockchain}{10}{section.3.1}% 
-\contentsline {section}{\numberline {3.2}Configuraci\IeC {\'o}n de la red}{11}{section.3.2}% 
-\contentsline {section}{\numberline {3.3}Cadena de bloques}{12}{section.3.3}% 
-\contentsline {section}{\numberline {3.4}\IeC {\'A}rboles Merkle}{13}{section.3.4}% 
-\contentsline {section}{\numberline {3.5}Algoritmo de prueba de trabajo}{14}{section.3.5}% 
-\contentsline {section}{\numberline {3.6}Escalabilidad del blockchain}{16}{section.3.6}% 
-\contentsline {section}{\numberline {3.7}Uso de GPUs}{17}{section.3.7}% 
-\contentsline {section}{\numberline {3.8}Resistencia a ASIC}{18}{section.3.8}% 
-\contentsline {section}{\numberline {3.9}Bifurcaciones}{20}{section.3.9}% 
-\contentsline {section}{\numberline {3.10}Alternativas a la prueba de trabajo}{20}{section.3.10}% 
-\contentsline {section}{\numberline {3.11}Privacidad y seguridad}{21}{section.3.11}% 
-\contentsline {chapter}{\numberline {4}El problema del consenso}{23}{chapter.4}% 
-\contentsline {section}{\numberline {4.1}El problema de los generales bizantinos}{23}{section.4.1}% 
-\contentsline {section}{\numberline {4.2}Soluci\IeC {\'o}n desde el Blockchain}{24}{section.4.2}% 
-\contentsline {section}{\numberline {4.3}Limitaciones del consenso alcanzado mediante el Blockchain}{24}{section.4.3}% 
-\contentsline {chapter}{\numberline {5}Implementaci\IeC {\'o}n del protocolo blockchain (hacer referencia a lo que hecho, sistema de gesti\IeC {\'o}n de documentos)}{26}{chapter.5}% 
-\contentsline {section}{\numberline {5.1}Librer\IeC {\'\i }as utilizadas}{26}{section.5.1}% 
-\contentsline {section}{\numberline {5.2}Caracter\IeC {\'\i }sticas de la implementaci\IeC {\'o}n}{28}{section.5.2}% 
-\contentsline {section}{\numberline {5.3}Aspectos t\IeC {\'e}cnicos.}{28}{section.5.3}% 
-\contentsline {section}{\numberline {5.4}Seguridad de la implementaci\IeC {\'o}n y posibles mejoras.}{29}{section.5.4}% 
-\contentsline {section}{\numberline {5.5}C\IeC {\'a}lculos sobre el algoritmo de prueba de trabajo}{30}{section.5.5}% 
-\contentsline {chapter}{\numberline {6}Conclusiones}{32}{chapter.6}% 
-\contentsline {section}{\numberline {6.1}Discusi\IeC {\'o}n plan de estudios}{32}{section.6.1}% 
-\contentsline {section}{\numberline {6.2}Ideas finales y posible trabajo futuro}{32}{section.6.2}% 
-\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{33}{section.6.2}% 
+\contentsline {chapter}{\IeC {\'I}ndice}{\es@scroman {i}}{section*.1}
+\contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n y objetivos.}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Criptograf\IeC {\'\i }a y Blockchain}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Curvas el\IeC {\'\i }pticas y ley de grupo}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}Funciones Hash}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Algoritmo ECDSA}{7}{section.2.3}
+\contentsline {chapter}{\numberline {3}Especificaci\IeC {\'o}n del protocolo blockchain}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Objetivos del Blockchain}{10}{section.3.1}
+\contentsline {section}{\numberline {3.2}Configuraci\IeC {\'o}n de la red}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Cadena de bloques}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}\IeC {\'A}rboles Merkle}{13}{section.3.4}
+\contentsline {section}{\numberline {3.5}Algoritmo de prueba de trabajo}{14}{section.3.5}
+\contentsline {section}{\numberline {3.6}Escalabilidad del blockchain}{16}{section.3.6}
+\contentsline {section}{\numberline {3.7}Uso de GPUs}{17}{section.3.7}
+\contentsline {section}{\numberline {3.8}Resistencia a ASIC}{18}{section.3.8}
+\contentsline {section}{\numberline {3.9}Bifurcaciones}{20}{section.3.9}
+\contentsline {section}{\numberline {3.10}Alternativas a la prueba de trabajo}{20}{section.3.10}
+\contentsline {section}{\numberline {3.11}Privacidad y seguridad}{21}{section.3.11}
+\contentsline {chapter}{\numberline {4}El problema del consenso}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}El problema de los generales bizantinos}{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}Soluci\IeC {\'o}n desde el Blockchain}{24}{section.4.2}
+\contentsline {section}{\numberline {4.3}Limitaciones del consenso alcanzado mediante el Blockchain}{24}{section.4.3}
+\contentsline {chapter}{\numberline {5}Implementaci\IeC {\'o}n del protocolo blockchain (hacer referencia a lo que hecho, sistema de gesti\IeC {\'o}n de documentos)}{26}{chapter.5}
+\contentsline {section}{\numberline {5.1}Librer\IeC {\'\i }as utilizadas}{26}{section.5.1}
+\contentsline {section}{\numberline {5.2}Caracter\IeC {\'\i }sticas de la implementaci\IeC {\'o}n}{28}{section.5.2}
+\contentsline {section}{\numberline {5.3}Aspectos t\IeC {\'e}cnicos.}{28}{section.5.3}
+\contentsline {section}{\numberline {5.4}Seguridad de la implementaci\IeC {\'o}n y posibles mejoras.}{29}{section.5.4}
+\contentsline {section}{\numberline {5.5}C\IeC {\'a}lculos sobre el algoritmo de prueba de trabajo}{30}{section.5.5}
+\contentsline {chapter}{\numberline {6}Conclusiones}{32}{chapter.6}
+\contentsline {section}{\numberline {6.1}Discusi\IeC {\'o}n plan de estudios}{32}{section.6.1}
+\contentsline {section}{\numberline {6.2}Ideas finales y posible trabajo futuro}{32}{section.6.2}
+\contentsline {chapter}{Bibliograf\IeC {\'\i }a}{33}{section.6.2}
