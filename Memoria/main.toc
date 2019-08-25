@@ -13,17 +13,17 @@
 \contentsline {section}{\numberline {3.5}Algoritmo de prueba de trabajo}{14}{section.3.5}
 \contentsline {section}{\numberline {3.6}Escalabilidad del blockchain}{16}{section.3.6}
 \contentsline {section}{\numberline {3.7}Uso de GPUs}{17}{section.3.7}
-\contentsline {section}{\numberline {3.8}Resistencia a ASIC}{18}{section.3.8}
-\contentsline {section}{\numberline {3.9}Bifurcaciones}{20}{section.3.9}
+\contentsline {section}{\numberline {3.8}Resistencia a ASIC}{17}{section.3.8}
+\contentsline {section}{\numberline {3.9}Bifurcaciones}{19}{section.3.9}
 \contentsline {section}{\numberline {3.10}Alternativas a la prueba de trabajo}{20}{section.3.10}
 \contentsline {section}{\numberline {3.11}Privacidad y seguridad}{21}{section.3.11}
 \contentsline {chapter}{\numberline {4}El problema del consenso}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}El problema de los generales bizantinos}{23}{section.4.1}
 \contentsline {section}{\numberline {4.2}Soluci\IeC {\'o}n desde el Blockchain}{24}{section.4.2}
 \contentsline {section}{\numberline {4.3}Limitaciones del consenso alcanzado mediante el Blockchain}{24}{section.4.3}
-\contentsline {chapter}{\numberline {5}Implementaci\IeC {\'o}n del protocolo blockchain (hacer referencia a lo que hecho, sistema de gesti\IeC {\'o}n de documentos)}{26}{chapter.5}
+\contentsline {chapter}{\numberline {5}Implementaci\IeC {\'o}n del protocolo blockchain}{26}{chapter.5}
 \contentsline {section}{\numberline {5.1}Librer\IeC {\'\i }as utilizadas}{26}{section.5.1}
-\contentsline {section}{\numberline {5.2}Caracter\IeC {\'\i }sticas de la implementaci\IeC {\'o}n}{28}{section.5.2}
+\contentsline {section}{\numberline {5.2}Caracter\IeC {\'\i }sticas de la implementaci\IeC {\'o}n}{27}{section.5.2}
 \contentsline {section}{\numberline {5.3}Aspectos t\IeC {\'e}cnicos.}{28}{section.5.3}
 \contentsline {section}{\numberline {5.4}Seguridad de la implementaci\IeC {\'o}n y posibles mejoras.}{29}{section.5.4}
 \contentsline {section}{\numberline {5.5}C\IeC {\'a}lculos sobre el algoritmo de prueba de trabajo}{30}{section.5.5}
