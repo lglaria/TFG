@@ -15,7 +15,7 @@ Este método, desarrollado en la década del 70 del siglo XX, solucionó algunas
 La criptografía de clave pública se fundamentan en la generación de una dupla $(p,q)$ donde $p$ es una clave que se transmitirá a todos los demás participantes mientras que $q$ solo será conocida por quien haya creado la dupla. A partir de $p$ es computacionalmente infactible deducir $q$ y por tanto cualquiera que haya recibido la clave pública puede usarla para cifrar un mensaje pero solo quien conozca $q$ puede determinar el mensaje original. Dentro del blockchain sin embargo el objetivo del cifrado no es ocultar información sino verificar la identidad de cada participante. Quien controle la clave privada puede usarla para firmar sus mensajes y la autenticidad de esta firma podrá ser verificada por todos aquellos que hayan recibido la clave pública. 
 %ojo con esto, explicar como funciona en el blockchain y no en  una red cualquiera, mirar https://www.coindesk.com/math-behind-bitcoin/
 
-Para especificar el principal algoritmo de clave pública usado en el blockchain (el ECDSA Elliptic Curves Digital Signature Algorithm) y explicar con más detalle el funcionamiento del proceso de autenticación hay que definir una serie de conceptos criptográficos y algebraicos. 
+Para especificar el principal algoritmo de clave pública usado en el blockchain (el ECDSA Elliptic Curves Digital Signature Algorithm)\citep{elliptic_cripto} y explicar con más detalle el funcionamiento del proceso de autenticación hay que definir una serie de conceptos criptográficos y algebraicos. 
 \section{Curvas elípticas y ley de grupo}\label{curvas_grupo}
 \theoremstyle{definition}\begin{definition}[Curva elíptica]\label{curv_ellipt}
 Una curva elíptica sobre un cuerpo $\mathbb{K}$ queda definida por la ecuación \[y^2 +a_1xy+a_3 y = x^3 +a_2x^2 +a_4x +a_6\] con $a_i$ elementos del cuerpo tales que el discriminante $\Delta$ de la curva sea distinto de cero.
@@ -30,7 +30,7 @@ El discriminante de una curva elíptica viene dado por la expresión:
   d_4 = a_1^2a_6 + 4a_2a_6 - a_1a_3a_4 + a_2a_3^2 - a_4^2
   }
 \end{equation*}
-Con la condición $\Delta$ $\neq$ 0 garantizamos que la curva sea "suave", es decir, que no tenga ningún punto con más de una recta tangente
+Con la condición $\Delta$ $\neq$ 0 garantizamos que la curva sea "suave", es decir, que no tenga ningún punto con más de una recta tangente.
 \end{definition} Para los algoritmos que vamos a estudiar nos restringiremos a los casos en que $\mathbb{K}$ sea un cuerpo finito de característica $p$, con $p$ un número primo distinto de 2 o 3. Bajo estas condiciones, y haciendo un cambio de variable, la ecuación general de una curva elíptica se puede reescribir como \begin{equation} \label{elliptic}y^2 = x^3 + ax + b \end{equation} Y para que el discriminante sea distinto de cero los coeficientes $a$ y $b$ deben cumplir $4a^3 + 27b^2 \not\equiv 0(\textrm{mod}\ p)$ En lo adelante cuando se hable de una curva elíptica nos estaremos refiriendo a \ref{elliptic} sobre un cuerpo primo de característica distinta de 2 o 3, aunque para dibujar la curva o visualizar algunas operaciones debamos suponer que la tenemos definida sobre un cuerpo de característica 0 como por ejemplo $\mathbb{R}$
 
 A los pares $(x,y)$ que cumplen \ref{elliptic} se les añade el punto del infinito y sobre esta estructura proyectiva se define la operación de suma y calculo del inverso como sigue:
@@ -101,17 +101,18 @@ Si se considera una probabilidad $C(2^{n},l) = 0.5$, es decir que de un total de
 
 
  Sin embargo, la probabilidad de encontrar una segunda preimagen comprobando solo $1.18\sqrt{2^{n}}$ cadenas es de 
- \begin{equation}
+ \begin{equation}\label{preimagen_eq}
 \frac{1.18\sqrt{2^{n}}}{2^{n}} = \frac{1.18}{2^{n/2}}
 \end{equation}
-Para $n > 20$ la probabilidad anterior prácticamente cero (Para función SHA-256 se tiene que $n = 256$).
- Para garantizar una probabilidad de al menos el 0.5 se tiene que:
-\begin{equation}
-k=\frac{1}{2}2^{n} = 2^{n-1} \approx 2^{n}
-\end{equation}
-Siendo k es el número de cadenas que hay que estudiar. En este caso el coste es prácticamente el mismo que el de comprobar todas las posibles cadenas que produce nuestra función hash.
+Para $n > 20$ la probabilidad anterior prácticamente cero (En la función SHA-256 se tiene que $n = 256$).
 
-Tomando $2n = 365$ se obtiene el problema del cumpleaños: para garantizar una colisión (dos individuos que cumplan años el mismo día) con una probabilidad del $50\%$ basta con reunir 22 personas, este resultado es mucho menor que el valor que podríamos dar intuitivamente, de ahí que se le llame paradoja aunque desde el punto de vista estrictamente lógico no lo sea.
+Para garantizar una probabilidad de encontrar una preimagen de al menos el 0.5 se tiene que el número de k de cadenas a comprobar debe ser de al menos:
+\begin{equation}
+k=\frac{1}{2}2^{n} = 2^{n-1}
+\end{equation}
+Donde se ha utilizado, al igual que en \ref{preimagen_eq}, la \textit{Regla de Laplace} (Número de casos favorables entre Número de casos posibles).  Como se ve, para n suficientemente grande el coste de encontrar una preimagen es prácticamente el mismo que el de comprobar todas las posibles cadenas que produce nuestra función hash.
+
+Tomando $2^{n} = 365$, es decir, ahora el número de casos posibles es 365 (ya no estamos mirando cadenas binarias) se obtiene el problema del cumpleaños: para garantizar una colisión (dos individuos que cumplan años el mismo día) con una probabilidad de al menos $50\%$ basta con reunir 23 personas, este resultado es mucho menor que el valor que podríamos dar intuitivamente, de ahí que se le llame paradoja aunque desde el punto de vista estrictamente lógico no lo sea.
 
 
 Hay que señalar que los cálculos anteriores solo son válidos bajo ciertos supuestos teóricos que en la práctica no se dan, pues ninguna función hash lleva los elementos del espacio de partida al de llegada siguiendo patrones completamente aleatorios. Una vez han sido encontradas colisiones (o se ha probado que la probabilidad de encontrarlas es \textit{alta}) la función hash deja de ser considerada segura. Un ejemplo de función hash en esta categoría es SHA-1, para la que se conocen colisiones desde 2017 \citep{sha-1}, aunque era considerada insegura desde 2005. 
@@ -136,15 +137,16 @@ La función hash que usaremos (SHA-256) es considerada segura por el momento.
 
 Ahora podemos especificar el algoritmo ECDSA (Elliptic Curve Digital Signature Algorithm)\citep{elliptic_cripto}, tanto el usado para la firma de mensajes como el correspondiente algoritmo de verificación. Este algoritmo se basa en la dificultad computacional de resolver el problema del logaritmo discreto para curvas elípticas (ECDLP).
 
-\theoremstyle{definition}\begin{definition}[Problema del logaritmo discreto para curvas elípticas]\label{ecdlp} Sea $E(\mathbb{K})$ una curva elíptica sobre un cuerpo $\mathbb{K}$. Sea $P \in E(\mathbb{K})$ y $Q \in <P>$. Encontrar $k$ tal que $Q= kP$. \end{definition}
+\theoremstyle{definition}\begin{definition}[Problema del logaritmo discreto para curvas elípticas]\label{ecdlp} Sea $E(\mathbb{K})$ una curva elíptica sobre un cuerpo $\mathbb{K}$. Sea $P \in E(\mathbb{K})$ y $Q  \in  <P>$. Encontrar $k$ tal que $Q= kP$. \end{definition}
 
-La definición anterior tiene sentido pues como se vio en \ref{curvas_grupo} los puntos de una curva elíptica definida sobre un cuerpo finito forman un grupo. En este caso $<P>$ es el subgrupo ciclico generado por el elemento $P$ de la curva. 
+La definición anterior tiene sentido pues como se vio en \ref{curvas_grupo} los puntos de una curva elíptica definida sobre un cuerpo finito forman un grupo y por tanto se puede hablar del grupo generado por cualquier elemento la curva. Así, se tiene que $<P>$ es el subgrupo cíclico generado por el punto $P$ de la curva $E(\mathbb{K})$. 
 
 No se conoce algoritmo que resuelva este problema en tiempo subexponencial \citep{discrete_log}. Sin embargo, aunque aquí no serán especificados se necesitan algoritmos apropiados para crear y representar el cuerpo finito $\mathbb{F}_{p}$ de forma que se garantice la intratabilidad de este problema.
 %El orden de una curva elíptica $E$ sobre un cuerpo finito $\mathbb{F}_{p}$ (número de puntos) es importante para garantizar la seguridad de este algoritmo.
 
 Antes de poder firmar un mensaje hay que generar las claves públicas y privada.
-Sea $P = (x_{1},y_{1})$ un punto de la curva elíptica $E(\mathbb{F}_{p})$ que genera un subgrupo cíclico $<P>$ de orden primo $n$. El par $(d,Q)$ de claves privada y pública se genera usando el algoritmo \ref{alg:claves}. La elección aleatoria de $d$ es muy importante, en otro caso se pueden tener problemas de seguridad (un ejemplo de esto fue el hackeo del software de la PS3 de Sony por el grupo fail0verflow en 2010).
+Sea $P = (x_{1},y_{1})$ un punto de la curva elíptica $E(\mathbb{F}_{p})$ que genera un subgrupo cíclico $<P>$ de orden primo $n$. El par $(d,Q)$ de claves privada y pública se genera usando el algoritmo \ref{alg:claves}. La elección aleatoria de $d$ es muy importante, en otro caso se pueden tener problemas de seguridad que permitan encontrar la clave privada utilizada.
+%no encontré buenas referencias sobre el hack de fail0verflow)
 \begin{algorithm}
 \caption{Generación de claves}\label{alg:claves}
 \begin{algorithmic}[1]
@@ -162,11 +164,13 @@ Una vez se ha generado la clave privada y utilizando una función hash $H$ que d
 \begin{algorithm}[H]
 \caption{Generación de firma}\label{alg:firmar}
 \begin{algorithmic}[1]
+\Repeat
 \State Se elige $k \in [1, n-1]$ de forma aleatoria
 \State Se calcula $z_{1} = kx_{1}$ 
-\State Se calcula  $r = z_{1} (mod  n)$ si $r = 0$ paso 1.
+\State Se calcula  $r = z_{1}  \mod n$ si $r = 0$ paso 1.
 \State Se calcula $e = H(m)$
-\State Se calcula $s = k^{-1}(e + dr) (mod n)$ si $s = 0$ paso 1. \Comment{$k^{-1}$ es el inverso de k en el grupo $<P>$}
+\State Se calcula $s = k^{-1}(e + dr)  \mod n$. Donde $k^{-1}$ es el inverso de k en el grupo $<P>$
+\Until{$s \neq 0$}
 \State Se devuelve $(r,s)$
 \end{algorithmic}
 \end{algorithm}
@@ -178,10 +182,10 @@ Ahora, quien recibe un mensaje $m$ con la firma $(r,s)$ puede verificar su proce
 \begin{algorithmic}[1]
 \State Verificar que $r,s \in [1, n-1]$, en otro caso \textbf{se rechaza la firma}
 \State Se calcula $e = H(m)$
-\State Se calcula $w = s^{-1} (mod n)$
-\State Se calcula $u_{1} = ew (mod n)$, $u_{2} = rw (mod n)$
+\State Se calcula $w = s^{-1}  \mod n$
+\State Se calcula $u_{1} = ew  \mod n$, $u_{2} = rw  \mod n$
 \State Se calcula $X = u_{1}P + u_{2}Q$, si $X=\infty$ \textbf{se rechaza la firma} \Comment{$X \in E(\mathbb{F}_{p})$}
-\State Sea $X = (x_{1},y_{1})$, se calcula $v = x_{1} (mod n)$
+\State Sea $X = (x_{1},y_{1})$, se calcula $v = x_{1} \mod n$
 \State Si $v = r$ \textbf{se acepta la firma}, en otro caso \textbf{se rechaza la firma}
 \end{algorithmic}
 \end{algorithm}
