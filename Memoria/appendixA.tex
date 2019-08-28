@@ -4,9 +4,10 @@
 Siguiendo las ideas planteadas en \ref{cap3} se ha realizado una implementación del protocolo blockchain, donde se han puesto en práctica los conceptos teóricos que se han tratado en este trabajo. 
 
 
-Esta implementación funciona como un gestor de documentos donde se aprovecha el carácter inmutable de la estructura de cadena de bloques. Los participantes enviarán información en formato de cadena de caracteres, que bien puedan ser artículos, trabajos o cualquier otra clase de texto que desean almacenar. Esta información va debidamente firmada usando cierta clave privada, incluyéndose también la clave pública que permite verificar la firma. Utilizando el algoritmo de prueba de trabajo visto en \ref{chap3:pow} los nodos transformarán esta información en bloques de forma que se pueda tener un registro que sirva para probar que un trabajo fue verificado y existía desde un momento de tiempo concreto.
+Esta implementación, realizada en el lenguaje de programación Python funciona como un gestor de documentos donde se aprovecha el carácter inmutable de la estructura de cadena de bloques. Los participantes enviarán información en formato de cadena de caracteres, que bien puedan ser artículos, trabajos o cualquier otra clase de texto que desean almacenar. Esta información va debidamente firmada usando cierta clave privada, incluyéndose también la clave pública que permite verificar la firma. Utilizando el algoritmo de prueba de trabajo visto en \ref{chap3:pow} los nodos transformarán esta información en bloques de forma que se pueda tener un registro que sirva para probar que un trabajo fue verificado y existía desde un momento de tiempo concreto.
 
-Esta implementación puede ser utilizada en un entorno real haciendo ciertas modificaciones, como se verá más adelante. Por ejemplo, la estructura enlazada de la cadena de bloques puede ser utilizada a manera de índices consecutivos en tablas SQL de forma que los nuevos \textit{inserts} que se hagan sean validados por los índices existentes en la tabla.
+Este código puede ser utilizado en un entorno real haciendo ciertas modificaciones, como se verá más adelante. Por ejemplo, la estructura enlazada de la cadena de bloques puede ser utilizada a manera de índices consecutivos en tablas SQL (\textit{structured query language}) de forma que cada nuevo dato que se añada (\textit{inserts}) deba estar seguir la lógica de la base de datos.
+
 
 
 La implementación se encuentra disponible en el repositorio de Github \url{https://github.com/lglaria/TFG}
@@ -16,14 +17,14 @@ La implementación se encuentra disponible en el repositorio de Github \url{http
 \section{Librerías utilizadas}
 En la realización de este código se han utilizado las siguientes librerías:
 \begin{itemize}
-\item \textit{multiprocessing}\cite{multiprocessing} Este paquete permite generar procesos que ofrecen concurrencia tanto local (en la misma máquina aprovechando los múltiples hilos (threads) de los procesadores actuales), así como concurrencia remote, en caso de máquinas conectadas a través de una red. Este paquete funciona tanto en sistemas Unix como Windows y está disponible tanto para Python 2 como para Python 3.
+\item \textit{multiprocessing}\cite{multiprocessing} Este paquete permite generar procesos que ofrecen concurrencia tanto local (en la misma máquina aprovechando los múltiples hilos (\textit{threads}) de los procesadores actuales), así como concurrencia remota, en caso de máquinas conectadas a través de una red. Este paquete funciona tanto en sistemas Unix como Windows y está disponible tanto para Python 2 como para Python 3.
 Un ejemplo de como se crean nuevos procesos.
 \lstset{language=Python}
 \lstset{frame=lines}
 \lstset{caption={Ejemplo proceso}}
 \lstset{label={lst:multi_process}}
 \lstset{basicstyle=\footnotesize}
-\begin{lstlisting}[frame=single]
+\begin{lstlisting}[title=Generación de nuevos procesos]
 from multiprocessing import Process
 
 def func(argument):
@@ -49,7 +50,7 @@ Ejemplo de generación de los pares de claves pública y privada
 \lstset{caption={Generación claves pública y privada}}
 \lstset{label={lst:fastecdsa_keys}}
 \lstset{basicstyle=\footnotesize}
-\begin{lstlisting}[frame=single]
+\begin{lstlisting}[title=Generación de claves]
 from fastecdsa import keys, curve
 
 """The reason there are two ways to generate a 
@@ -88,7 +89,7 @@ Los bloques de la cadena son arrays de Python y almacenan (en ese orden):
 \lstset{caption={Algoritmo de prueba de trabajo}}
 \lstset{label={lst:code_direct}}
 \lstset{basicstyle=\footnotesize}
-\begin{lstlisting}[frame=single]
+\begin{lstlisting}[title=Algoritmo de prueba de trabajo]
 def pow(self,bloque): #algoritmo de prueba de trabajo
   bloque_str = ''.join(str(e) for e in bloque)
   while True:
