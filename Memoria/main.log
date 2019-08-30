@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  28 AUG 2019 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.2.20)  29 AUG 2019 18:41
 entering extended mode
 **./main.tex
 (main.tex
@@ -643,7 +643,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 
+l.32 
       [1
 
 
@@ -658,7 +658,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.32 \end{equation*}
+l.31 \end{equation*}
                      [3
 
 
@@ -671,20 +671,20 @@ Package epstopdf Info: Source file: <figures/elliptic.eps>
 (epstopdf)                    size: 5778 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/elliptic-eps-conver
 ted-to.pdf figures/elliptic.eps>
-(epstopdf)             \includegraphics on input line 48.
+(epstopdf)             \includegraphics on input line 47.
 Package epstopdf Info: Output file is already uptodate.
-<figures/elliptic-eps-converted-to.pdf, id=225, 462.72874pt x 346.29375pt>
+<figures/elliptic-eps-converted-to.pdf, id=229, 462.72874pt x 346.29375pt>
 File: figures/elliptic-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/elliptic-eps-converted-to.pdf>
 Package pdftex.def Info: figures/elliptic-eps-converted-to.pdf  used on input l
-ine 48.
+ine 47.
 (pdftex.def)             Requested size: 227.62204pt x 170.34592pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 48.
+(Font)              <10> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 48.
+(Font)              <7> on input line 47.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 48.
+(Font)              <5> on input line 47.
 Package epstopdf Info: Source file: <figures/elliptic1.eps>
 (epstopdf)                    date: 2018-12-18 08:58:10
 (epstopdf)                    size: 10607 bytes
@@ -693,40 +693,39 @@ Package epstopdf Info: Source file: <figures/elliptic1.eps>
 (epstopdf)                    size: 5842 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/elliptic1-eps-conve
 rted-to.pdf figures/elliptic1.eps>
-(epstopdf)             \includegraphics on input line 51.
+(epstopdf)             \includegraphics on input line 50.
 Package epstopdf Info: Output file is already uptodate.
-<figures/elliptic1-eps-converted-to.pdf, id=226, 462.72874pt x 346.29375pt>
+<figures/elliptic1-eps-converted-to.pdf, id=230, 462.72874pt x 346.29375pt>
 File: figures/elliptic1-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/elliptic1-eps-converted-to.pdf>
 Package pdftex.def Info: figures/elliptic1-eps-converted-to.pdf  used on input 
-line 51.
+line 50.
 (pdftex.def)             Requested size: 227.62204pt x 170.34592pt.
 
-Overfull \hbox (11.87906pt too wide) in paragraph at lines 48--53
+Overfull \hbox (11.87906pt too wide) in paragraph at lines 47--52
 [][] [][] 
  []
 
 [4]
 
-Package amsthm Warning: Unknown theoremstyle `theorem' on input line 67.
+Package amsthm Warning: Unknown theoremstyle `theorem' on input line 66.
 
 [5 <./figures/elliptic-eps-converted-to.pdf> <./figures/elliptic1-eps-converted
--to.pdf>] [6]
+-to.pdf>] [6] [7]
 Overfull \hbox (39.79977pt too wide) in paragraph at lines 138--139
 []\T1/lmr/m/n/12 Ahora po-de-mos es-pe-ci-fi-car el al-go-rit-mo ECD-SA (Ellip-
 tic Cur-ve Di-gi-tal Sig-na-tu-re Algorithm)[[]],
  []
 
-[7]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 151.
-) (chapter3.tex [8] [9]
+[8]) (chapter3.tex [9]
 Cap\'{\i }tulo 3.
 [10
 
 
 ] [11] [12]
-<figures/blockchain_diagram.png, id=325, 639.89063pt x 188.20313pt>
+<figures/blockchain_diagram.png, id=329, 639.89063pt x 188.20313pt>
 File: figures/blockchain_diagram.png Graphic file (type png)
 <use figures/blockchain_diagram.png>
 Package pdftex.def Info: figures/blockchain_diagram.png  used on input line 42.
@@ -741,7 +740,7 @@ Underfull \hbox (badness 4713) in paragraph at lines 42--42
  : / / www . doc . ic . ac . uk / ~ma7614 /
  []
 
-<figures/merkle_tree.png, id=329, 455.7025pt x 263.98625pt>
+<figures/merkle_tree.png, id=333, 455.7025pt x 263.98625pt>
 File: figures/merkle_tree.png Graphic file (type png)
 <use figures/merkle_tree.png>
 Package pdftex.def Info: figures/merkle_tree.png  used on input line 60.
@@ -765,7 +764,7 @@ s been already used, duplicate ignored
                    \relax 
 l.99   \subfloat
                 [Proceso pow (cambiar esta imagen (rehacer en python)]{{\inc...
-<figures/process_to_modify.png, id=357, 614.7768pt x 486.618pt>
+<figures/process_to_modify.png, id=362, 614.7768pt x 486.618pt>
 File: figures/process_to_modify.png Graphic file (type png)
 <use figures/process_to_modify.png>
 Package pdftex.def Info: figures/process_to_modify.png  used on input line 99.
@@ -777,7 +776,7 @@ e ignored
                    \relax 
 l.130   \subfloat
                  [Ejemplo de dispositivo ASIC (Fuente: amazon.com)]{{\includ...
-<figures/asic.jpg, id=378, 1505.625pt x 1000.73875pt>
+<figures/asic.jpg, id=383, 1505.625pt x 1000.73875pt>
 File: figures/asic.jpg Graphic file (type jpg)
 <use figures/asic.jpg>
 Package pdftex.def Info: figures/asic.jpg  used on input line 130.
@@ -824,7 +823,7 @@ f>
 converted-to.pdf figures/resultados_pow.eps>
 (epstopdf)             \includegraphics on input line 162.
 Package epstopdf Info: Output file is already uptodate.
-<figures/resultados_pow-eps-converted-to.pdf, id=534, 462.72874pt x 346.29375pt
+<figures/resultados_pow-eps-converted-to.pdf, id=539, 462.72874pt x 346.29375pt
 >
 File: figures/resultados_pow-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/resultados_pow-eps-converted-to.pdf>
@@ -921,10 +920,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 306.
  ) 
 Here is how much of TeX's memory you used:
- 12367 strings out of 492946
- 177972 string characters out of 3135483
- 472848 words of memory out of 3000000
- 15840 multiletter control sequences out of 15000+200000
+ 12368 strings out of 492946
+ 177988 string characters out of 3135483
+ 473001 words of memory out of 3000000
+ 15841 multiletter control sequences out of 15000+200000
  83085 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,11n,49p,1680b,2109s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -947,9 +946,9 @@ iKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmt
 t10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (41 pages, 800966 bytes).
+Output written on main.pdf (41 pages, 802656 bytes).
 PDF statistics:
- 742 PDF objects out of 1000 (max. 8388607)
+ 747 PDF objects out of 1000 (max. 8388607)
  170 named destinations out of 1000 (max. 500000)
  321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
