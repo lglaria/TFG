@@ -12,6 +12,16 @@
 Garantizar la autenticidad de las transacciones entre los nodos y la integridad del registro es la tarea de la criptografía dentro del blockchain. La criptografía de clave pública, donde no es necesario la existencia de un canal seguro para transmitir la información, es el método criptográfico utilizado en el Blockchain, pues justamente en este entorno público toda la información transmitida es vista por los demás participantes.
 Este método, desarrollado en la década del 70 del siglo XX, solucionó algunas limitaciones de la criptografía de clave simétrica. En un entorno donde se use una misma clave tanto para cifrar como para descrifrar mensajes se debe disponer un canal seguro a través del cual esta clave sea distribuida. Existen situaciones en las que no se puede garantizar la existencia de tal canal y por tanto el uso de claves simétricas es inviable.
 La criptografía de clave pública se fundamentan en la generación de una dupla $(p,q)$ donde $p$ es una clave que se transmitirá a todos los demás participantes mientras que $q$ solo será conocida por quien haya creado la dupla. A partir de $p$ es computacionalmente infactible deducir $q$ y por tanto cualquiera que haya recibido la clave pública puede usarla para cifrar un mensaje pero solo quien conozca $q$ puede determinar el mensaje original. Dentro del blockchain sin embargo el objetivo del cifrado no es ocultar información sino verificar la identidad de cada participante. Quien controle la clave privada puede usarla para firmar sus mensajes y la autenticidad de esta firma podrá ser verificada por todos aquellos que hayan recibido la clave pública. 
+\begin{figure}[H]
+%\centering
+  \subfloat[Criptografía asimétrica]{{\includegraphics[width=8cm]{figures/simetrica.png}}}%
+  \qquad
+  %\caption{Cálculo de $P+Q=R$}
+  \subfloat[Criptografía asimétrica]{{\includegraphics[width=8cm]{figures/asimetrica.png}}}%
+  %\caption{Cálculo de $2P$ y $-P$}
+	\caption{Modelos criptográficos}%
+	\label{fig:cripto}%
+\end{figure}
 %ojo con esto, explicar como funciona en el blockchain y no en  una red cualquiera, mirar https://www.coindesk.com/math-behind-bitcoin/
 
 Para especificar el principal algoritmo de clave pública usado en el blockchain (el ECDSA Elliptic Curves Digital Signature Algorithm)\citep{elliptic_cripto} y explicar con más detalle el funcionamiento del proceso de autenticación hay que definir una serie de conceptos criptográficos y algebraicos. 

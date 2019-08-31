@@ -2,8 +2,8 @@
 \contentsline {chapter}{\IeC {\'I}ndice}{\es@scroman {i}}{section*.1}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n y objetivos.}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Criptograf\IeC {\'\i }a y Blockchain}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Curvas el\IeC {\'\i }pticas y ley de grupo}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Funciones Hash}{5}{section.2.2}
+\contentsline {section}{\numberline {2.1}Curvas el\IeC {\'\i }pticas y ley de grupo}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Funciones Hash}{6}{section.2.2}
 \contentsline {section}{\numberline {2.3}Algoritmo ECDSA}{8}{section.2.3}
 \contentsline {chapter}{\numberline {3}Especificaci\IeC {\'o}n del protocolo blockchain}{10}{chapter.3}
 \contentsline {section}{\numberline {3.1}Objetivos del Blockchain}{10}{section.3.1}
