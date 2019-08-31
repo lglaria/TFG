@@ -1,6 +1,16 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
+Warning--string name "b-money" is undefined
+--line 255 of file references.bib
+Warning--string name "private" is undefined
+--line 262 of file references.bib
+"," immediately follows a field name---line 262 of file references.bib
+ :  title = private, Public
+ :                         , and Consortium Blockchains},
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in redes_p2p
+Warning--to sort, need author or key in type_blockchain
 Warning--to sort, need author or key in sha256_2
 Warning--to sort, need author or key in scalability
 Warning--to sort, need author or key in paralel_gpu
@@ -18,4 +28,4 @@ Warning--empty journal in hashcash
 Warning--empty year in dryjahashimoto
 Warning--empty journal in bitcoin
 Warning--empty journal in raft
-(There were 17 warnings)
+(There was 1 error message)
