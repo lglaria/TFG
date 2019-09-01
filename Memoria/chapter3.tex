@@ -37,10 +37,12 @@ Por último, y con el objetivo de reducir el uso de espacio, el conjunto de oper
 Lo anterior se puede considerar más o menos estándar en todas las implementaciones del blockchain, pero se pueden incluir otros elementos dentro de cada bloque.
 \begin{figure}[H]
 %\centering
-  \subfloat[Diagrama Blockchain (Fuente \url{http://www.doc.ic.ac.uk/~ma7614/topics_website/tech.html}
-)]%
-  {{\includegraphics[width=12cm]{figures/blockchain_diagram.png}}}%
-  \qquad
+  \begin{center}
+  \includegraphics[width=14cm]{figures/Blockchain_diagram.pdf}
+  \end{center}
+  \caption{Diagrama Proceso Blockchain}%
+  %{{\includegraphics[width=14cm]{figures/Blockchain_diagram.pdf}}}%
+  %\qquad
 
 	\label{fig:blockchain}%
 \end{figure}
@@ -56,13 +58,16 @@ Por las propiedades de las funciones hash vistas antes, se garantiza la integrid
 Los árboles Merkle permiten de esta forma hacer verificaciones sobre el estado de la cadena de forma rápida y permitiendo un menor uso de almacenamiento.
 
 \begin{figure}[H]
-\centering
-  \subfloat[Diagrama Árbol Merkle (Fuente \url{https://www.researchgate.net/publication/324385574_Towards_Decentralized_Accountability_and_Self-sovereignty_in_Healthcare_Systems}]{{\includegraphics[width=12cm]{figures/merkle_tree.png}}}%
-  \qquad
+%\centering
+  \begin{center}
+  \includegraphics[width=14cm]{figures/Merkle_tree.pdf}
+  \end{center}
+  \caption{Diagrama Árbol Merkle}%
+  %{{\includegraphics[width=14cm]{figures/Blockchain_diagram.pdf}}}%
+  %\qquad
 
-	\label{fig:merkle}%
+	\label{fig:merkle_tree}%
 \end{figure}
-
 
 \section{Algoritmo de prueba de trabajo}\label{chap3:pow}
 La estructura en cadena de bloques enlazados usando funciones hash no resuelve por si sola el problema del doble gasto visto en \ref{objetivos}, para eso hay que establecer un algoritmo que permita a los participantes decidir que información se puede incluir en la cadena de bloques, validando de esta forma las transacciones correctas. En el Bitcoin se estableció como tal sistema el algoritmo de prueba de trabajo (Proof of Work) \citep{bitcoin}, en posteriores implementaciones del Blockchain, salvo ciertas modificaciones se ha mantenido en general este mismo algoritmo. La idea de la prueba de trabajo se originó para resolver el problema del uso abusivo de ciertos recursos como el correo electrónico mediante el envío masivo de mensajes de spam. Hashcash \citep{hashcash}, una de las primeras implementaciones de un mecanismo para solucionar este problema, se basaba en usar una función de coste para generar una ficha que permitiría disponer de cierto recurso. Esta ficha probaba que el usuario había invertido determinado tiempo de procesamiento en resolver el problema planteado por la función de coste y de esta forma el uso del recurso en cuestión estaba condicionado por la resolución de cierto problema que conllevaba determinado uso de CPU por parte del usuario. Con el Bitcoin este planteamiento basado en un sistema cliente-servidor fue extendido a un contexto descentralizado.
@@ -96,10 +101,13 @@ Se incluye también el algoritmo de verificación que deben utilizar los nodos p
 
 \begin{figure}[H]
 %\centering
-  \subfloat[Proceso pow (cambiar esta imagen (rehacer en python)]{{\includegraphics[width=12cm]{figures/process_to_modify.png}}}%
-  \qquad
-  %\caption{Cálculo de $P+Q=R$}
-  %\caption{Cálculo de $2P$ y $-P$}
+  \begin{center}
+  \includegraphics[width=14cm]{figures/Pow_diagram.pdf}
+  \end{center}
+  \caption{Diagrama del proceso de prueba de trabajo}%
+  %{{\includegraphics[width=14cm]{figures/Blockchain_diagram.pdf}}}%
+  %\qquad
+
 	\label{fig:flux}%
 \end{figure}
 
@@ -125,14 +133,20 @@ Una alternativa a las GPUs es el uso de circuitos integrados de aplicación espe
 \section{Resistencia a ASIC} \label{cap3:asic}
 
 Con el aumento en la popularidad del Bitcoin, y de otras criptomonedas similares, se generalizó el uso de hardware dedicado exclusivamente al minado, es decir, a resolver el problema planteado por el algoritmo de prueba de trabajo visto en \ref{chap3:pow}. El desarrollo de esta clase de hardware ha hecho que resulte prácticamente imposible utilizar ordenadores de uso doméstico durante el proceso de minado, lo que llevado a múltiples usuarios a dejar de participar en el proceso de creación y validación de la cadena de bloques, delegando en terceros este proceso. Esta delegación de la confianza en una tercera entidad va en contra de los principios fundamentales del Blockchain. Se tienen entonces dos problemas fundamentales: por un lado el desarrollo de hardware especifico que en la práctica excluye a una parte de los usuarios de participar en el algoritmo de prueba de trabajo, por otro lado, este algoritmo hace posible delegar en otra entidad (los llamados mineros) el proceso de creación de nuevos bloques en la cadena, haciendo que parte de los usuarios no participen activamente en el proceso.
+
+
 \begin{figure}[H]
 %\centering
-  \subfloat[Ejemplo de dispositivo ASIC (Fuente: amazon.com)]{{\includegraphics[width=12cm]{figures/asic.jpg}}}%
-  \qquad
-  %\caption{Cálculo de $P+Q=R$}
-  %\caption{Cálculo de $2P$ y $-P$}
-	\label{fig:test}%
+  \begin{center}
+  \includegraphics[width=10cm]{figures/asic.jpg}
+  \end{center}
+  \caption{Ejemplo de dispositivo ASIC (Fuente: \url{amazon.com})}%
+  %{{\includegraphics[width=14cm]{figures/Blockchain_diagram.pdf}}}%
+  %\qquad
+
+	\label{fig:asic}%
 \end{figure}
+
 Estos son los motivos del desarrollo de algoritmos resistentes al minado mediante ASIC’S y que a su vez intentan minimizar la creación de nodos dedicados exclusivamente a este proceso, como las llamadas mining pools del Bitcoin. Uno de los principales algoritmos cuyo objetivo es combatir estos problemas es Hashimoto \citep{dryjahashimoto}. Se trata de un algoritmo basado en E/S, otros algoritmos creados para este fin se basaban por ejemplo en el mayor uso de memoria, pero para estos ha ido surgiendo hardware específico.
 
  La idea base detrás de Hashimoto no es hacer un algoritmo que sea resistente a ASIC, sino un algoritmo que funcione de forma óptima en ordenadores de uso doméstico, basado en el hecho que los límites de lectura-escritura son un problema estudiado durante años en el campo de la computación y es poco probable que el minado de monedas produzca avances significativos en esta área, y en caso de producirlos su trascendencia seria tal que impactarían en la industria del hardware en general.

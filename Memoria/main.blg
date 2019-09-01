@@ -2,10 +2,10 @@ This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: references.bib
 Warning--string name "b-money" is undefined
---line 255 of file references.bib
-Warning--string name "private" is undefined
 --line 262 of file references.bib
-"," immediately follows a field name---line 262 of file references.bib
+Warning--string name "private" is undefined
+--line 269 of file references.bib
+"," immediately follows a field name---line 269 of file references.bib
  :  title = private, Public
  :                         , and Consortium Blockchains},
 I'm skipping whatever remains of this entry

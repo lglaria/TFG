@@ -171,6 +171,11 @@ FIPS PUB.
 \newblock Secure hash standard (shs).
 \newblock {\em FIPS PUB}, 180(4), 2012.
 
+\bibitem{stallings2017cryptography}
+William Stallings.
+\newblock {\em Cryptography and network security: principles and practice}.
+\newblock Pearson Upper Saddle River, 2017.
+
 \bibitem{sha-1}
 Marc Stevens, Elie Bursztein, Pierre Karpman, Ange Albertini, and Yarik Markov.
 \newblock The first collision for full sha-1.

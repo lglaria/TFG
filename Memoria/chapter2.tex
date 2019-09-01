@@ -9,19 +9,36 @@
 
 %secciones: una breve introduccion sobre lo que se pretende con la criptografia, ecdsa: curvas elipticas, algoritmo de consenso, coste computacional de los algoritmos, quizás algun extra tipo implementacion...
 %\section{Criptografía de clave pública} no poner como seccion, sino incluirlo en la introduccion del capitulo
-Garantizar la autenticidad de las transacciones entre los nodos y la integridad del registro es la tarea de la criptografía dentro del blockchain. La criptografía de clave pública, donde no es necesario la existencia de un canal seguro para transmitir la información, es el método criptográfico utilizado en el Blockchain, pues justamente en este entorno público toda la información transmitida es vista por los demás participantes.
-Este método, desarrollado en la década del 70 del siglo XX, solucionó algunas limitaciones de la criptografía de clave simétrica. En un entorno donde se use una misma clave tanto para cifrar como para descrifrar mensajes se debe disponer un canal seguro a través del cual esta clave sea distribuida. Existen situaciones en las que no se puede garantizar la existencia de tal canal y por tanto el uso de claves simétricas es inviable.
-La criptografía de clave pública se fundamentan en la generación de una dupla $(p,q)$ donde $p$ es una clave que se transmitirá a todos los demás participantes mientras que $q$ solo será conocida por quien haya creado la dupla. A partir de $p$ es computacionalmente infactible deducir $q$ y por tanto cualquiera que haya recibido la clave pública puede usarla para cifrar un mensaje pero solo quien conozca $q$ puede determinar el mensaje original. Dentro del blockchain sin embargo el objetivo del cifrado no es ocultar información sino verificar la identidad de cada participante. Quien controle la clave privada puede usarla para firmar sus mensajes y la autenticidad de esta firma podrá ser verificada por todos aquellos que hayan recibido la clave pública. 
-\begin{figure}[H]
-%\centering
-  \subfloat[Criptografía asimétrica]{{\includegraphics[width=8cm]{figures/simetrica.png}}}%
-  \qquad
-  %\caption{Cálculo de $P+Q=R$}
-  \subfloat[Criptografía asimétrica]{{\includegraphics[width=8cm]{figures/asimetrica.png}}}%
-  %\caption{Cálculo de $2P$ y $-P$}
-	\caption{Modelos criptográficos}%
-	\label{fig:cripto}%
-\end{figure}
+Garantizar la autenticidad de las transacciones entre los nodos y la integridad del registro es la tarea de la criptografía dentro del Blockchain. 
+Esto es, que siempre será posible identificar el origen de la información de forma segura (\textit{autenticidad}), y que tendremos la certeza que la totalidad o parte de los datos no han sido suprimidos o modificados (\textit{integridad})
+
+
+
+
+La criptografía de clave pública, donde no es necesaria la existencia de un canal seguro para transmitir la información, será el método criptográfico elegido, pues justamente estamos en un entorno público donde toda la información transmitida es vista por los demás participantes.
+Este método, desarrollado en la década del 70 del siglo XX, solucionó algunas limitaciones de la criptografía de clave simétrica. En un entorno donde se use una misma clave tanto para cifrar como para descrifrar mensajes se debe disponer un canal seguro a través del cual esta clave sea distribuida.\citep{stallings2017cryptography} Existen situaciones en las que no se puede garantizar la existencia de tal canal y por tanto el uso de claves simétricas es inviable. 
+\begin{figure}[H]\label{fig:cripto_simetric}
+
+  \begin{center}
+  \includegraphics[width=10cm]{figures/simetrica.png}
+  \end{center}
+
+  \caption{Criptografía de clave simétrica}
+
+\end{figure} 
+
+
+La criptografía de clave pública se fundamentan en la generación de una dupla $(p,q)$ donde $p$ será la clave pública, que se transmitirá a todos los demás participantes, mientras que $q$ es la clave privada solo será conocida por quien haya creado la dupla. A partir de $p$ es computacionalmente infactible deducir $q$ y por tanto cualquiera que haya recibido la clave pública puede usarla para cifrar un mensaje pero solo quien conozca $q$ puede determinar el mensaje original.
+
+\begin{figure}[H]\label{fig:cripto_asimetric}
+
+  \begin{center}
+  \includegraphics[width=10cm]{figures/asimetrica.png}
+  \end{center}
+  \caption{Criptografía de clave asimétrica}
+
+\end{figure} 
+Dentro del Blockchain sin embargo el objetivo del cifrado no es ocultar información sino verificar la identidad de cada participante. Quien controle la clave privada puede usarla para firmar sus mensajes y la autenticidad de esta firma podrá ser verificada por todos aquellos que hayan recibido la clave pública. \citep{elliptic_cripto}
 %ojo con esto, explicar como funciona en el blockchain y no en  una red cualquiera, mirar https://www.coindesk.com/math-behind-bitcoin/
 
 Para especificar el principal algoritmo de clave pública usado en el blockchain (el ECDSA Elliptic Curves Digital Signature Algorithm)\citep{elliptic_cripto} y explicar con más detalle el funcionamiento del proceso de autenticación hay que definir una serie de conceptos criptográficos y algebraicos. 
@@ -30,15 +47,24 @@ Para especificar el principal algoritmo de clave pública usado en el blockchain
 Una curva elíptica sobre un cuerpo $\mathbb{K}$ queda definida por la ecuación \[y^2 +a_1xy+a_3 y = x^3 +a_2x^2 +a_4x +a_6\] con $a_i$ elementos del cuerpo tales que el discriminante $\Delta$ de la curva sea distinto de cero.
 El discriminante de una curva elíptica viene dado por la expresión:
 
-\begin{equation*}
-  \sysdelim..\systeme{
-  \Delta = -d_1^2d_4 - 8d_2^3 - 27d_3^2 + 9d_1d_2d_3,
-  d_1 = a_1^2 + 4a_2,
-  d_2 = 2a_4 + a_1a_3,
-  d_3 = a_3^2 + 4a_6,
-  d_4 = a_1^2a_6 + 4a_2a_6 - a_1a_3a_4 + a_2a_3^2 - a_4^2
-  }
-\end{equation*}
+%\begin{align*}
+%  \sysdelim..\systeme[\Delta, d_1, d_2, d_3, d_4]{
+%  \Delta = -d_1^2d_4 - 8d_2^3 - 27d_3^2 + 9d_1d_2d_3,
+  % d_1 = a_1^2 + 4a_2,
+ %  d_2 = 2a_4 + a_1a_3,
+%  d_3 = a_3^2 + 4a_6,
+%  d_4 = a_1^2a_6 + 4a_2a_6 - a_1a_3a_4 + a_2a_3^2 - a_4^2
+%  }
+%\end{align*}
+
+\begin{alignat*}{4}
+\Delta & {}={} & & -d_1^2d_4 - 8d_2^3 - 27d_3^2 + 9d_1d_2d_3 \\
+d_1 & {}={} &  & a_1^2 + 4a_2 \\
+d_2 & {}={} &  & 2a_4 + a_1a_3 \\
+d_3 & {}={} &  & a_3^2 + 4a_6 \\
+d_4 & {}={} &  & a_1^2a_6 + 4a_2a_6 - a_1a_3a_4 + a_2a_3^2 - a_4^2
+\end{alignat*}
+
 Con la condición $\Delta$ $\neq$ 0 garantizamos que la curva sea "suave", es decir, que no tenga ningún punto con más de una recta tangente.
 \end{definition} Para los algoritmos que vamos a estudiar nos restringiremos a los casos en que $\mathbb{K}$ sea un cuerpo finito de característica $p$, con $p$ un número primo distinto de 2 o 3. Bajo estas condiciones, y haciendo un cambio de variable, la ecuación general de una curva elíptica se puede reescribir como \begin{equation} \label{elliptic}y^2 = x^3 + ax + b \end{equation} Y para que el discriminante sea distinto de cero los coeficientes $a$ y $b$ deben cumplir $4a^3 + 27b^2 \not\equiv 0(\textrm{mod}\ p)$ En lo adelante cuando se hable de una curva elíptica nos estaremos refiriendo a \ref{elliptic} sobre un cuerpo primo de característica distinta de 2 o 3, aunque para dibujar la curva o visualizar algunas operaciones debamos suponer que la tenemos definida sobre un cuerpo de característica 0 como por ejemplo $\mathbb{R}$
 
@@ -145,7 +171,7 @@ es considerada segura hasta la fecha actual.
 %Referencia (además del libro) https://pdfs.semanticscholar.org/c06a/d6512775be1076e4abd43e3f2928729da776.pdf
 %https://www.ietf.org/rfc/rfc6979.txt
 
-Ahora podemos especificar el algoritmo ECDSA (Elliptic Curve Digital Signature Algorithm)\citep{elliptic_cripto}, tanto el usado para la firma de mensajes como el correspondiente algoritmo de verificación. Este algoritmo se basa en la dificultad computacional de resolver el problema del logaritmo discreto para curvas elípticas (ECDLP).
+Ahora podemos especificar el algoritmo ECDSA (Elliptic Curve Digital Signature Algorithm),\citep{elliptic_cripto} tanto el usado para la firma de mensajes como el correspondiente algoritmo de verificación. Este algoritmo se basa en la dificultad computacional de resolver el problema del logaritmo discreto para curvas elípticas (ECDLP).
 
 \theoremstyle{definition}\begin{definition}[Problema del logaritmo discreto para curvas elípticas]\label{ecdlp} Sea $E(\mathbb{K})$ una curva elíptica sobre un cuerpo $\mathbb{K}$. Sea $P \in E(\mathbb{K})$ y $Q  \in  <P>$. Encontrar $k$ tal que $Q= kP$. \end{definition}
 
