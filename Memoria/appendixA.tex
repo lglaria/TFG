@@ -1,12 +1,12 @@
 \cleardoublepage
 
 \chapter{Implementación del protocolo blockchain}\label{implementacion}
-Siguiendo las ideas planteadas en \ref{cap3} se ha realizado una implementación del protocolo blockchain, donde se han puesto en práctica los conceptos teóricos que se han tratado en este trabajo. 
+Siguiendo las ideas planteadas en el capítulo \ref{cap3} se ha realizado una implementación del protocolo Blockchain, donde se han puesto en práctica los conceptos teóricos que se han tratado en este trabajo. 
 
 
-Esta implementación, realizada en el lenguaje de programación Python funciona como un gestor de documentos donde se aprovecha el carácter inmutable de la estructura de cadena de bloques. Los participantes enviarán información en formato de cadena de caracteres, que bien puedan ser artículos, trabajos o cualquier otra clase de texto que desean almacenar. Esta información va debidamente firmada usando cierta clave privada, incluyéndose también la clave pública que permite verificar la firma. Utilizando el algoritmo de prueba de trabajo visto en \ref{chap3:pow} los nodos transformarán esta información en bloques de forma que se pueda tener un registro que sirva para probar que un trabajo fue verificado y existía desde un momento de tiempo concreto.
+Esta implementación, realizada en el lenguaje de programación Python funciona como un gestor de documentos donde se aprovecha el carácter inmutable de la estructura de cadena de bloques. Los participantes enviarán información en formato de cadena de caracteres, que bien puedan ser artículos, trabajos o cualquier otra clase de texto que desean almacenar. Esta información va debidamente firmada usando cierta clave privada, incluyéndose también la clave pública que permite verificar la firma. Utilizando el algoritmo de prueba de trabajo visto en \ref{chap3:pow} los nodos transformarán esta información en bloques de forma que se pueda tener un registro que sirva para probar que un texto fue verificado y existía desde un momento de tiempo concreto.
 
-Este código puede ser utilizado en un entorno real haciendo ciertas modificaciones, como se verá más adelante. Por ejemplo, la estructura enlazada de la cadena de bloques puede ser utilizada a manera de índices consecutivos en tablas SQL (\textit{structured query language}) de forma que cada nuevo dato que se añada (\textit{inserts}) deba estar seguir la lógica de la base de datos.
+Este código puede ser utilizado en un entorno real haciendo ciertas modificaciones. Por ejemplo, la estructura enlazada de la cadena de bloques puede ser utilizada a manera de índices consecutivos en tablas SQL (\textit{structured query language}) de forma que cada nuevo dato que se añada (\textit{inserts}) deba seguir la lógica de la base de datos.
 
 
 
@@ -15,13 +15,16 @@ La implementación se encuentra disponible en el repositorio de Github \url{http
 %Algunas ideas: (esto es opcional) cada participante debería disponer de dos hilos de proceso. Uno de ellos para interactuar con los otros nodos y otro para ejecutar el algoritmo de consenso. La idea es que en caso que alguien haya resuelto ese puzzle parar nuestro bucle del algoritmo de consenso.
 %La solución anterior tiene menos sentido en nuestro caso, en el que el bucle del algoritmo de prueba de trabajo tiene un propósito. Sin embargo, en otro entorno sí que podría ser útil esta implementación. Se podrían implementar ambas,
 \section{Librerías utilizadas}
-En la realización de este código se han utilizado las siguientes librerías:
+En la realización de este código se han utilizado las siguientes librerías de Python:
 \begin{itemize}
-\item \textit{multiprocessing}\cite{multiprocessing} Este paquete permite generar procesos que ofrecen concurrencia tanto local (en la misma máquina aprovechando los múltiples hilos (\textit{threads}) de los procesadores actuales), así como concurrencia remota, en caso de máquinas conectadas a través de una red. Este paquete funciona tanto en sistemas Unix como Windows y está disponible tanto para Python 2 como para Python 3.
-Un ejemplo de como se crean nuevos procesos.
+\item \textit{multiprocessing}\cite{multiprocessing} Este paquete permite generar procesos que ofrecen concurrencia tanto local (en la misma máquina aprovechando los múltiples hilos (\textit{threads}) de los procesadores actuales), así como concurrencia remota, en caso de máquinas conectadas a través de una red.
+También nos permite disponer de una cola FIFO (\textit{first in first out}) para que los diferentes procesos puedan compartir información, sin necesidad de hacer uso de ninguna primitiva de concurrencia. Este paquete funciona tanto en sistemas Unix como Windows y está disponible tanto para Python 2 como para Python 3.
+
+
+
 \lstset{language=Python}
 \lstset{frame=lines}
-\lstset{caption={Ejemplo proceso}}
+\lstset{caption={Ejemplo generación de un proceso que muestra por pantalla \textit{"hello world"}}}
 \lstset{label={lst:multi_process}}
 \lstset{basicstyle=\footnotesize}
 \begin{lstlisting}[title=Generación de nuevos procesos]
@@ -36,18 +39,29 @@ if __name__ == '__main__':
     p.join()
 \end{lstlisting}
 
-Esta librería permite controlar los procesos creados, ofreciendo así una solución de alto nivel a los problemas de concurrencia mediante el objeto manager.
-
 \item \textit{hashlib} \cite{hashlib} Esta librería implementa diversas funciones hash, entre las que se encuentran: SHA1, SHA224, SHA256, SHA384, y SHA512 entre otras. Para cada función hash invocada se crea un objeto con el mismo tipo de interfaz, por ejemplo si se invoca a \textit{sha256()} se creará un objeto de la función hash SHA256 para el que podrán por ejemplo calculares los valores hash que devuelve al aplicarle esta función a cierta cadena de caracteres.
 
-\item \textit{fastecdsa} \cite{fastecdsa} Este paquete implementa protocolos criptográficos basados en curvas elípticas tal y como se vieron en el Capítulo 1 \ref{cap1} 
-
-Para ser utilizado debe ser instalado previamente mediante el comando $pip install fastecdsa$
-
-Ejemplo de generación de los pares de claves pública y privada
 \lstset{language=Python}
 \lstset{frame=lines}
-\lstset{caption={Generación claves pública y privada}}
+\lstset{caption={Ejemplo uso de hashlib}}
+\lstset{label={lst:hashlib}}
+\lstset{basicstyle=\footnotesize}
+\begin{lstlisting}[title=Hashlib]
+import hashlib
+"""
+Hex output of sha-224 for message m
+"""
+m = "Message"
+hashlib.sha224(m).hexdigest()
+\end{lstlisting}
+
+\item \textit{fastecdsa} \cite{fastecdsa} Este paquete implementa protocolos criptográficos basados en curvas elípticas tal y como se vieron en el Capítulo \ref{cap1} 
+
+Para ser utilizada esta librería debe ser instalada previamente, pues no viene por defecto en las diferentes distribuciones de Python. Puede instalarse por ejemplo mediante el comando textit{pip install fastecdsa}
+
+\lstset{language=Python}
+\lstset{frame=lines}
+\lstset{caption={Generación claves pública y privada usando fastecdsa}}
 \lstset{label={lst:fastecdsa_keys}}
 \lstset{basicstyle=\footnotesize}
 \begin{lstlisting}[title=Generación de claves]
@@ -69,8 +83,38 @@ priv_key = keys.gen_private_key(curve.P256)
 pub_key = keys.get_public_key(priv_key, curve.P256)
 \end{lstlisting}
 
-\end{itemize}
 
+\lstset{language=Python}
+\lstset{frame=lines}
+\lstset{caption={Firma y verificación de mensajes}}
+\lstset{label={lst:fastecdsa_sign}}
+\lstset{basicstyle=\footnotesize}
+\begin{lstlisting}[title=Firma y verificación]
+from fastecdsa import curve, ecdsa, keys
+from hashlib import sha384
+
+m = "a_message_to_sign"  # some message
+
+''' use default curve and hash function (P256 and SHA2) '''
+private_key = keys.gen_private_key(curve.P256)
+public_key = keys.get_public_key(private_key, curve.P256)
+# standard signature, returns two integers
+r, s = ecdsa.sign(m, private_key)
+# should return True as the signature we just generated is valid.
+valid = ecdsa.verify((r, s), m, public_key)
+
+''' specify a different hash function to use with ECDSA '''
+r, s = ecdsa.sign(m, private_key, hashfunc=sha384)
+valid = ecdsa.verify((r, s), m, public_key, hashfunc=sha384)
+
+''' specify a different curve to use with ECDSA '''
+private_key = keys.gen_private_key(curve.P224)
+public_key = keys.get_public_key(private_key, curve.P224)
+r, s = ecdsa.sign(m, private_key, curve=curve.P224)
+valid = ecdsa.verify((r, s), m, public_key, curve=curve.P224)
+\end{lstlisting}
+
+\end{itemize}
 
 \section{Características de la implementación}
 El algoritmo de consenso elegido ha sido el de prueba de trabajo, combinado con la elección de la cadena de bloques más larga en caso de tener varias alternativas disponibles.
@@ -84,6 +128,12 @@ Los bloques de la cadena son arrays de Python y almacenan (en ese orden):
 \item El nonce del bloque. Cadena de 32 bits a partir del algoritmo de prueba de trabajo. Este algoritmo ha sido implementado de forma similar a lo visto en \ref{chap3:pow}
 \end{itemize}
 
+
+
+\section{Aspectos técnicos.}
+En esta implementación se ha utilizado la versión 3 del lenguaje de programación Python. Para el proceso de firma basado en el algoritmo ECDSA se ha usado la curva elíptica P-256 del Instituto Nacional de Estándares y Tecnología (NIST) dependiente del Departamento de Comercio de los Estados Unidos. El algoritmo de firma basado en la curva anterior, y obtenido a partir de la librería \textit{fastecdsa} cumple con los requisitos de seguridad mencionados en el capítulo \ref{cap1}.
+
+En la implementación del algoritmo de prueba de trabajo se ha utilizado la función hash SHA-256 que ya fue mencionada en la sección \ref{chap3:pow}. Esta función, ampliamente utilizada en diversas implementaciones del Blockchain se ha obtenido a través de la librería \textit{hashlib} \citep{hashlib}. Los nodos calculan el nonce generando valores aleatorios de 32 bits. Por defecto se ha puesto una dificultad fija, pero este valor puede ser modificado y calculado a partir de una función tal y como ocurre en el Bitcoin. En el cálculo del nonce no se modifica el timestamp.
 \lstset{language=Python}
 \lstset{frame=lines}
 \lstset{caption={Algoritmo de prueba de trabajo}}
@@ -102,18 +152,36 @@ def pow(self,bloque): #algoritmo de prueba de trabajo
 \end{lstlisting}
 
 
-\section{Aspectos técnicos.}
-En esta implementación se ha utilizado el lenguaje de programación Python. Para el proceso de firma basado en el algoritmo ECDSA se ha recurrido la librería \textit{fastecdsa} \citep{fastecdsa}. En concreto, se ha usado la curva elíptica p-256 del Instituto Nacional de Estándares y Tecnología (NIST) dependiente del Departamento de Comercio de los Estados Unidos. El algoritmo de firma basado en la curva anterior cumple con los requisitos de seguridad mencionados en el capítulo \ref{cap1}.
+En esta implementación cada nodo almacena el conjunto de las operaciones realizadas y no la raíz Merkle, pero este punto puede ser modificado en aras de la compresión de la información.
 
-En la implementación del algoritmo de prueba de trabajo se ha utilizado la función hash SHA-256 que ya fue mencionada en la sección \ref{chap3:pow}. Esta función, ampliamente utilizada en diversas implementaciones del blockchain, se ha obtenido a través de la librería \textit{hashlib} \citep{hashlib}. Los nodos calculan el nonce generando valores aleatorios de 32 bits. Por defecto se ha puesto una dificultad fija, pero este valor puede ser modificado y calculado a partir de una función tal y como ocurre en el Bitcoin. En el cálculo del nonce no se modifica el timestamp.
+Como ya se mencionó la red p2p sobre la que funciona el protocolo se ha construido usando la librería \textit{multiprocessing} \citep{multiprocessing}. Quedando así solucionados los problemas de concurrencia que podrían aparecer al mantener activos al mismo tiempo dos procesos que trabajan sobre la misma estructura de datos: uno para recibir los mensajes que le llegan a un usuario (nodo) y otro para ejecutar el algoritmo de consenso, actualizar la cadena y transmitir información.
 
+Cada nodo es capaz de calcular un nuevo bloque, validar un bloque recibido, validar una cadena completa, incluir nuevos bloques previamente verificados en la cadena existente y transmitir la cadena a otros nodos. Igualmente existe un mecanismo para generar el bloque inicial, en caso que se quiera construir la estructura desde cero. Todas estas funcionalidades se encuentran implementadas como métodos de la clase Blockchain que es invocada por cada nodo.
 
-Se almacena en cada nodo el conjunto de las operaciones y no la raiz Merkle del arbol resultante. Esto puede igualmente ser modificado.
+\lstset{language=Python}
+\lstset{frame=lines}
+\lstset{caption={Fragmento del código de la clase Blockchain, se ha incluido el método para generar el bloque inicial}}
+\lstset{label={lst:code_blockchain}}
+\lstset{basicstyle=\footnotesize}
+\begin{lstlisting}[title=Clase Blockchain]
 
-Por último, la red p2p sobre la que funciona el protocolo se ha construido usando la librería \textit{multiprocessing} \citep{multiprocessing}. Con esta librería se solucionan los problemas de concurrencia que podrían aparecer al mantener activos al mismo tiempo dos procesos que trabajan sobre la misma estructura de datos: uno para recibir los mensajes que le llegan a un nodo y otro para ejecutar el algoritmo de consenso, actualizar la cadena y transmitir información.
+class Blockchain(object): 
+	"""
+	formato bloques [hash_bloque_anterior, (data,data), timestamp, indice, nonce]
+	"""
+	def __init__(self):
+		self.cadena = []
+		self.longitud_nonce = 4 #dificultad algoritmo pow (modificable)
 
+	def primer_bloque(self):
+	"""
+	Generacion primer bloque
+	"""
+		primer_bloque = [0,0,int(round(time.time())),0]
+		self.cadena.append(self.pow(primer_bloque))
+\end{lstlisting}
 
-Esta implementación puede igualmente ser aplicada en un entorno real basado por ejemplo en bases de datos de tipo SQL. En este supuesto se podria utilizar el valor hash de cada bloque como referencia de las entradas de la tabla.
+%Esta implementación puede igualmente ser aplicada en un entorno real basado por ejemplo en bases de datos de tipo SQL. En este supuesto se podria utilizar el valor hash de cada bloque como referencia de las entradas de la tabla.
 
 
 \section{Seguridad de la implementación y posibles mejoras.}

@@ -1,8 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{type_blockchain}
-
-
 \bibitem{asic_def}
 Application-specific integrated circuit (asic).
 \newblock
@@ -61,6 +58,11 @@ The gpu industry is booming thanks to blockchain.
   \url{https://www.investopedia.com/tech/gpu-industry-booming-thanks-blockchain/l}.
 \newblock Accessed: 2019-08-20.
 
+\bibitem{type_blockchain}
+Private, public, and consortium blockchains.
+\newblock \url{https://errna.com/private-public-blockchain.htm}.
+\newblock Accessed: 2019-08-20.
+
 \bibitem{pos}
 Proof of stake faq.
 \newblock
@@ -108,6 +110,9 @@ S.~Vanstone D.~Hankerson, A.~Menezes.
 
 \bibitem{b_money}
 Wei Dai.
+\newblock B-money.
+\newblock \url{http://www.weidai.com/bmoney.txt}.
+\newblock Accessed: 2019-08-20.
 
 \bibitem{arpanet}
 Peter~J. Denning.
