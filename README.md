@@ -1,7 +1,7 @@
 # TFG
 ##
 
-#Proceso cliente local --> main.py & p2p.py
+#Proceso cliente local --> client1.py & client2.py
 
 
 ##Orden de ejecucion servidor blockchain al iniciar (dentro de p2p.py)
