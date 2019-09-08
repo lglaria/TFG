@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.15)  8 SEP 2019 22:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.15)  8 SEP 2019 22:46
 entering extended mode
 **./main.tex
 (main.tex
@@ -2760,15 +2760,9 @@ LaTeX Info: Redefining \% on input line 23.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 306.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 306.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 2E1D7E6B5E5E00FE1CA7CBBB27DEE57C;2488.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 7D5BD42E43AEF3006538421F1A305EE4;2488
-(rerunfilecheck)             After:  2E1D7E6B5E5E00FE1CA7CBBB27DEE57C;2488.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2814,7 +2808,7 @@ rograms/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Luis Alberto Glar
 /Luis Alberto Glaría/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/l
 mtt12.pfb><C:/Users/Luis Alberto Glaría/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (42 pages, 901720 bytes).
+Output written on main.pdf (42 pages, 901718 bytes).
 PDF statistics:
  861 PDF objects out of 1000 (max. 8388607)
  223 named destinations out of 1000 (max. 500000)
