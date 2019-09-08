@@ -7,7 +7,7 @@
 \BOOKMARK [1][-]{section.2.1}{Curvas el\355pticas y ley de grupo}{chapter.2}% 7
 \BOOKMARK [1][-]{section.2.2}{Funciones Hash}{chapter.2}% 8
 \BOOKMARK [1][-]{section.2.3}{Algoritmo ECDSA}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Especificaci\363n del protocolo blockchain}{}% 10
+\BOOKMARK [0][-]{chapter.3}{Especificaci\363n del protocolo Blockchain}{}% 10
 \BOOKMARK [1][-]{section.3.1}{Objetivos del Blockchain}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.2}{Configuraci\363n de la red}{chapter.3}% 12
 \BOOKMARK [1][-]{section.3.3}{Cadena de bloques}{chapter.3}% 13
@@ -23,7 +23,7 @@
 \BOOKMARK [1][-]{section.4.1}{El problema de los generales bizantinos}{chapter.4}% 23
 \BOOKMARK [1][-]{section.4.2}{Soluci\363n desde el Blockchain}{chapter.4}% 24
 \BOOKMARK [1][-]{section.4.3}{Limitaciones del consenso alcanzado mediante el Blockchain}{chapter.4}% 25
-\BOOKMARK [0][-]{chapter.5}{Implementaci\363n del protocolo blockchain}{}% 26
+\BOOKMARK [0][-]{chapter.5}{Implementaci\363n del protocolo Blockchain}{}% 26
 \BOOKMARK [1][-]{section.5.1}{Librer\355as utilizadas}{chapter.5}% 27
 \BOOKMARK [1][-]{section.5.2}{Caracter\355sticas de la implementaci\363n}{chapter.5}% 28
 \BOOKMARK [1][-]{section.5.3}{Aspectos t\351cnicos.}{chapter.5}% 29
